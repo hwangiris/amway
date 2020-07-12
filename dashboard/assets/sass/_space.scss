@@ -1,0 +1,101 @@
+@for $i from 1 through 4 {
+    h#{$i},
+    .h#{$i} {
+        font-size: #{nth($fz, $i)}rem;
+        line-height: 1.2;
+    }
+}
+
+.ml-0,
+.mx-0,
+.m-0 {
+    margin-left: 0;
+}
+
+.mr-0,
+.mx-0,
+.m-0 {
+    margin-right: 0;
+}
+
+.mt-0,
+.my-0,
+.m-0 {
+    margin-top: 0;
+}
+
+.mb-0,
+.my-0,
+.m-0 {
+    margin-bottom: 0;
+}
+
+@for $i from 1 through 5 {
+    .m-#{$i}0,
+    .ml-#{$i}0,
+    .mx-#{$i}0 {
+        margin-left: #{nth($number, $i)}px;
+    }
+    .m-#{$i}0,
+    .mr-#{$i}0,
+    .mx-#{$i}0 {
+        margin-right: #{nth($number, $i)}px;
+    }
+    .m-#{$i}0,
+    .mt-#{$i}0,
+    .my-#{$i}0 {
+        margin-top: #{nth($number, $i)}px;
+    }
+    .m-#{$i}0,
+    .mb-#{$i}0,
+    .my-#{$i}0 {
+        margin-bottom: #{nth($number, $i)}px;
+    }
+}
+
+.pl-0,
+.px-0,
+.p-0 {
+    padding-left: 0;
+}
+
+.pr-0,
+.px-0,
+.p-0 {
+    padding-right: 0;
+}
+
+.pt-0,
+.py-0,
+.p-0 {
+    padding-top: 0;
+}
+
+.pb-0,
+.py-0,
+.p-0 {
+    padding-bottom: 0;
+}
+
+@for $i from 1 through 5 {
+    .p-#{$i}0,
+    .pl-#{$i}0,
+    .px-#{$i}0 {
+        padding-left: #{nth($number, $i)}px;
+    }
+    .p-#{$i}0,
+    .pr-#{$i}0,
+    .px-#{$i}0 {
+        padding-right: #{nth($number, $i)}px;
+    }
+    .p-#{$i}0,
+    .pt-#{$i}0,
+    .py-#{$i}0 {
+        padding-top: #{nth($number, $i)}px;
+    }
+    .p-#{$i}0,
+    .pb-#{$i}0,
+    .py-#{$i}0 {
+        padding-bottom: #{nth($number, $i)}px;
+    }
+}
