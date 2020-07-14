@@ -188,12 +188,27 @@ footer {
     margin-right: auto;
     color: $white;
     background-color: $dark-blue;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    img {
+        display: block;
+        height: 2rem;
+        margin-bottom: -2px;
+    }
+    span {
+        display: block;
+    }
 }
 
 #top {
     display: none;
     position: fixed;
-    bottom: 15px;
+    bottom: 60px;
     right: 15px;
     color: $blue;
     font-size: 2rem;
