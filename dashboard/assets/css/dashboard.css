@@ -274,9 +274,10 @@ footer span { display: block; }
 .item-section .item-group .item-more.opened i.icon::before { display: block; -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
 .item-section .item-group .item-list { padding: 0.25rem 0; margin-bottom: 15px; font-size: 1.125rem; line-height: 1; }
 .item-section .item-group .item-list i.icon { margin-right: 0.7125rem; }
-.item-section .item-group .item-list .payment { min-width: 130px; }
+.item-section .item-group .item-list .payment { min-width: 130px; width: calc(100% - 9rem); }
 .item-section .item-group .item-list + .item-list { display: none; }
 .item-section .item-group.opened .item-list + .item-list { display: flex; }
+.item-section .item-group .item-month { width: 4.5rem; }
 .item-section .item-group .item-status { width: 4.5rem; text-align: right; word-break: keep-all; }
 .item-section .item-group .item-status.success { color: #3D71C0; }
 .item-section .item-group .item-status.overdue { color: #E662AD; }

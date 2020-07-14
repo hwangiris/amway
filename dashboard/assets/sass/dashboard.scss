@@ -439,6 +439,7 @@ footer {
             }
             .payment {
                 min-width: 130px;
+                width: calc(100% - 9rem);
             }
             +.item-list {
                 display: none;
@@ -450,6 +451,9 @@ footer {
                     display: flex;
                 }
             }
+        }
+        .item-month {
+            width: 4.5rem;
         }
         .item-status {
             width: 4.5rem;
