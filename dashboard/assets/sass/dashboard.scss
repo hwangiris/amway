@@ -303,7 +303,8 @@ footer {
         justify-content: space-between;
     }
     .icon,
-    span {
+    span,
+    a {
         display: block;
     }
     .item-detail {
@@ -322,8 +323,12 @@ footer {
             .icon {
                 font-size: 1.375rem;
             }
-            span {
+            a {
+                color: $gray-500;
                 font-size: 1.125rem;
+                &:hover {
+                    color: $black;
+                }
             }
         }
         .label-number {
