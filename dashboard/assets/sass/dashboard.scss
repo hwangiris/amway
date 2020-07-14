@@ -19,14 +19,13 @@
 header {
     position: fixed;
     top: 0;
-    left: 50%;
+    left: 0;
     width: 100%;
     max-width: 640px;
     margin-left: auto;
     margin-right: auto;
     color: $gray-500;
     background-color: $gray-100;
-    @include translateX(-50%);
     z-index: 1;
     h1 {
         padding-top: 20px;
@@ -119,6 +118,7 @@ header {
             margin-right: 0.6rem;
             padding: 0.4rem 0.8rem;
             @include border-radius(2rem);
+            cursor: pointer;
             @include breakpoint(375px) {
                 margin-right: 0.8rem;
                 padding: 0.4rem 0.6rem;
@@ -143,6 +143,10 @@ header {
                 background-color: $dark-green;
             }
         }
+    }
+    @include breakpoint(640px) {
+        left: 50%;
+        @include translateX(-50%);
     }
     &.scroll {
         h1 {

@@ -42,7 +42,7 @@
     </header>
     <div class="container-search container">
         <form action="existing-search.html" method="post" class="search">
-            <input type="text" name="search" id="search-input" placeholder="搜尋姓名 / 編號">
+            <input type="text" name="search" id="search-input" placeholder="搜尋姓名 / 編號" value="967">
             <button type="submit" id="search-send">
                 <i class="icon icon-search"></i>
             </button>
@@ -50,6 +50,9 @@
     </div>
     <main>
         <div class="container pb-50">
+            <div class="search-block pt-20">
+                <span>共找到 5 筆資料</span><i onclick="window.open('existing.html', '_self')" class="icon icon-x"></i>
+            </div>
             <div class="item-section pt-40">
                 <div class="item-detail distributor">
                     <div class="d-flex align-items-center justify-content-between">

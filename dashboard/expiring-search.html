@@ -16,10 +16,10 @@
         <div class="container text-center">
             <ul class="sort">
                 <li>
-                    <a class="existing active" href="existing.html">現有訂單</a>
+                    <a class="existing" href="existing.html">現有訂單</a>
                 </li>
                 <li>
-                    <a class="expiring" href="expiring.html">即將到期</a>
+                    <a class="expiring active" href="expiring.html">即將到期</a>
                 </li>
                 <li>
                     <a class="cancel" href="cancel.html">解約</a>
@@ -41,8 +41,8 @@
         </div>
     </header>
     <div class="container-search container">
-        <form action="existing-search.html" method="post" class="search">
-            <input type="text" name="search" id="search-input" placeholder="搜尋姓名 / 編號">
+        <form action="expiring-search.html" method="post" class="search">
+            <input type="text" name="search" id="search-input" placeholder="搜尋姓名 / 編號" value="967">
             <button type="submit" id="search-send">
                 <i class="icon icon-search"></i>
             </button>
@@ -50,6 +50,9 @@
     </div>
     <main>
         <div class="container pb-50">
+            <div class="search-block pt-20">
+                <span>共找到 5 筆資料</span><i onclick="window.open('expiring.html', '_self')" class="icon icon-x"></i>
+            </div>
             <div class="item-section pt-40">
                 <div class="item-detail distributor">
                     <div class="d-flex align-items-center justify-content-between">
@@ -63,12 +66,12 @@
                     </div>
                     <div class="h2 mt-20 mb-10 font-weight-500">長客複合魚油膠囊－單瓶１２月</div>
                 </div>
-                <div class="item-group expiring">
+                <div class="item-group overdue">
                     <div class="item-title mb-10 text-center">付款日期</div>
                     <div class="item-list d-flex align-items-center justify-content-between">
                         <div class="item-month">第12月</div>
                         <div class="payment d-flex align-items-center"><i class="icon icon-clock"></i>2020-02-26</div>
-                        <div class="item-status expiring">即將到期</div>
+                        <div class="item-status overdue">逾期續約</div>
                     </div>
                     <div class="item-list d-flex align-items-center justify-content-between">
                         <div class="item-month">第11月</div>
@@ -100,46 +103,6 @@
                         <i class="icon icon-down"></i>
                     </div>
                 </div>
-                <div class="item-detail distributor">
-                    <div class="h2 mt-20 mb-10 font-weight-500">長客複合益生菌－雙盒１２月</div>
-                </div>
-                <div class="item-group existing">
-                    <div class="item-title mb-10 text-center">付款日期</div>
-                    <div class="item-list d-flex align-items-center justify-content-between">
-                        <div class="item-month">第6月</div>
-                        <div class="payment d-flex align-items-center"><i class="icon icon-clock"></i>2019-12-13</div>
-                        <div class="item-status existing">扣款成功</div>
-                    </div>
-                    <div class="item-list d-flex align-items-center justify-content-between">
-                        <div class="item-month">第5月</div>
-                        <div class="payment d-flex align-items-center"><i class="icon icon-clock"></i>2019-11-13</div>
-                        <div class="item-status success">扣款成功</div>
-                    </div>
-                    <div class="item-list d-flex align-items-center justify-content-between">
-                        <div class="item-month">第4月</div>
-                        <div class="payment d-flex align-items-center"><i class="icon icon-clock"></i>2019-10-13</div>
-                        <div class="item-status success">扣款成功</div>
-                    </div>
-                    <div class="item-list d-flex align-items-center justify-content-between">
-                        <div class="item-month">第3月</div>
-                        <div class="payment d-flex align-items-center"><i class="icon icon-clock"></i>2019-09-13</div>
-                        <div class="item-status success">扣款成功</div>
-                    </div>
-                    <div class="item-list d-flex align-items-center justify-content-between">
-                        <div class="item-month">第1月</div>
-                        <div class="payment d-flex align-items-center"><i class="icon icon-clock"></i>2019-08-13</div>
-                        <div class="item-status success">扣款成功</div>
-                    </div>
-                    <div class="item-list d-flex align-items-center justify-content-between">
-                        <div class="item-month">第1月</div>
-                        <div class="payment d-flex align-items-center"><i class="icon icon-clock"></i>2019-07-13</div>
-                        <div class="item-status success">扣款成功</div>
-                    </div>
-                    <div class="item-more mt-20 d-flex align-items-center">
-                        <span class="more">看更多</span><span class="less">收回</span>
-                        <i class="icon icon-down"></i>
-                    </div>
-                </div>
             </div>
             <div class="item-section pt-40">
                 <div class="item-detail distributor">
@@ -154,12 +117,12 @@
                     </div>
                     <div class="h2 mt-20 mb-10 font-weight-500">長客複合益生菌－雙盒１２月</div>
                 </div>
-                <div class="item-group overdue">
+                <div class="item-group expiring">
                     <div class="item-title mb-10 text-center">付款日期</div>
                     <div class="item-list d-flex align-items-center justify-content-between">
                         <div class="item-month">第12月</div>
                         <div class="payment d-flex align-items-center"><i class="icon icon-clock"></i>2020-02-26</div>
-                        <div class="item-status overdue">逾期續約</div>
+                        <div class="item-status expiring">即將到期</div>
                     </div>
                     <div class="item-list d-flex align-items-center justify-content-between">
                         <div class="item-month">第11月</div>
@@ -246,12 +209,12 @@
                         </div>
                         <div class="h2 mt-20 mb-10 font-weight-500">長客營養早餐－單罐組６月</div>
                     </div>
-                    <div class="item-group renewed">
+                    <div class="item-group expiring">
                         <div class="item-title mb-10 text-center">付款日期</div>
                         <div class="item-list d-flex align-items-center justify-content-between">
                             <div class="item-month">第06月</div>
                             <div class="payment d-flex align-items-center"><i class="icon icon-clock"></i>2019-08-26</div>
-                            <div class="item-status renewed">已續約</div>
+                            <div class="item-status expiring">即將到期</div>
                         </div>
                         <div class="item-list d-flex align-items-center justify-content-between">
                             <div class="item-month">第05月</div>
@@ -383,12 +346,12 @@
                     <div class="item-detail member">
                         <div class="h2 mt-20 mb-10 font-weight-500">長客晶明錠－單罐組１２月</div>
                     </div>
-                    <div class="item-group renewed">
+                    <div class="item-group overdue">
                         <div class="item-title mb-10 text-center">付款日期</div>
                         <div class="item-list d-flex align-items-center justify-content-between">
                             <div class="item-month">第12月</div>
                             <div class="payment d-flex align-items-center"><i class="icon icon-clock"></i>2020-02-26</div>
-                            <div class="item-status renewed">已續約</div>
+                            <div class="item-status overdue">逾期續約</div>
                         </div>
                         <div class="item-list d-flex align-items-center justify-content-between">
                             <div class="item-month">第11月</div>
@@ -425,12 +388,12 @@
                     <div class="item-detail member">
                         <div class="h2 mt-20 mb-10 font-weight-500">長客複合益生菌－雙盒６月</div>
                     </div>
-                    <div class="item-group existing">
+                    <div class="item-group expiring">
                         <div class="item-title mb-10 text-center">付款日期</div>
                         <div class="item-list d-flex align-items-center justify-content-between">
                             <div class="item-month">第06月</div>
                             <div class="payment d-flex align-items-center"><i class="icon icon-clock"></i>2019-08-26</div>
-                            <div class="item-status existing">扣款成功</div>
+                            <div class="item-status expiring">即將到期</div>
                         </div>
                         <div class="item-list d-flex align-items-center justify-content-between">
                             <div class="item-month">第05月</div>
@@ -510,6 +473,11 @@
                             <div class="payment d-flex align-items-center"><i class="icon icon-clock"></i>2019-09-26</div>
                             <div class="item-status success">扣款成功</div>
                         </div>
+                        <div class="item-list d-flex align-items-center justify-content-between">
+                            <div class="item-month">第06月</div>
+                            <div class="payment d-flex align-items-center"><i class="icon icon-clock"></i>2019-08-26</div>
+                            <div class="item-status success">扣款成功</div>
+                        </div>
                         <div class="item-more mt-20 d-flex align-items-center">
                             <span class="more">看更多</span><span class="less">收回</span>
                             <i class="icon icon-down"></i>
@@ -520,12 +488,12 @@
                     <div class="item-detail member">
                         <div class="h2 mt-20 mb-10 font-weight-500">長客營養早餐－單罐組１２月</div>
                     </div>
-                    <div class="item-group overdue">
+                    <div class="item-group renewed">
                         <div class="item-title mb-10 text-center">付款日期</div>
                         <div class="item-list d-flex align-items-center justify-content-between">
                             <div class="item-month">第12月</div>
                             <div class="payment d-flex align-items-center"><i class="icon icon-clock"></i>2020-02-26</div>
-                            <div class="item-status overdue">逾期續約</div>
+                            <div class="item-status renewed">已續約</div>
                         </div>
                         <div class="item-list d-flex align-items-center justify-content-between">
                             <div class="item-month">第11月</div>
