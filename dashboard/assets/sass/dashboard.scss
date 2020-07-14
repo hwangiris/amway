@@ -430,8 +430,10 @@ footer {
             }
         }
         .item-list {
-            font-size: 1.125rem;
+            padding: 0.25rem 0;
             margin-bottom: 15px;
+            font-size: 1.125rem;
+            line-height: 1;
             i.icon {
                 margin-right: 0.7125rem;
             }
@@ -450,6 +452,8 @@ footer {
             }
         }
         .item-status {
+            width: 4.5rem;
+            text-align: right;
             &.success {
                 color: $blue;
             }
