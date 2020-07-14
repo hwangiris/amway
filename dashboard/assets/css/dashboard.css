@@ -277,7 +277,7 @@ footer span { display: block; }
 .item-section .item-group .item-list .payment { min-width: 130px; }
 .item-section .item-group .item-list + .item-list { display: none; }
 .item-section .item-group.opened .item-list + .item-list { display: flex; }
-.item-section .item-group .item-status { width: 4.5rem; text-align: right; }
+.item-section .item-group .item-status { width: 4.5rem; text-align: right; word-break: keep-all; }
 .item-section .item-group .item-status.success { color: #3D71C0; }
 .item-section .item-group .item-status.overdue { color: #E662AD; }
 .item-section .item-group .item-status.renewed { color: #EF9D00; }
