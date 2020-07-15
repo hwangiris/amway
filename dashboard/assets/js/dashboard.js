@@ -12,8 +12,8 @@ $(function() {
     });
     $(window).load(function() {
         let headerHeight = Math.ceil($('header').outerHeight()),
-            searchHeight = $('.container-search').outerHeight(),
-            searchTop = $('.container-search').offset().top,
+            searchHeight = $('.container-search.mobile').outerHeight(),
+            searchTop = $('.container-search.mobile').offset().top,
             distributorFirstTop = $('.item-detail.distributor').first().offset().top - searchTop - searchHeight + 34,
             memberFirstTop = $('.item-detail.member').first().offset().top - headerHeight + 34;
         $('body').css({
