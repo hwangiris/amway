@@ -520,6 +520,21 @@ footer {
         background-color: $gray-bg;
         border: solid transparent;
         border-width: 0 3px;
+        @include breakpoint(1024px) {
+            position: relative;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            &::before {
+                @include beforeafter('', block);
+                position: absolute;
+                top: calc(20px + 2.25rem + 0.5rem + 1px);
+                left: 0;
+                right: 0;
+                border-bottom: 1px solid $blue;
+                z-index: 0;
+            }
+        }
         .item-title,
         .item-more {
             color: $gray-500;
@@ -527,6 +542,9 @@ footer {
             line-height: 1;
             justify-content: center;
             @include transition(color 0.2s);
+            @include breakpoint(1024px) {
+                display: none;
+            }
             i.icon {
                 margin-left: 0.35rem;
             }
@@ -553,19 +571,36 @@ footer {
             }
         }
         .item-list {
+            display: flex;
+            align-items: center;
             padding: 0.25rem 0;
-            margin-bottom: 15px;
             font-size: 1.125rem;
             line-height: 1;
+            @include breakpoint(1024px) {
+                justify-content: center;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+            @include breakpoint(max-width 1023px) {
+                margin-bottom: 15px;
+                justify-content: space-between;
+            }
             i.icon {
                 margin-right: 0.7125rem;
+                @include breakpoint(1024px) {
+                    display: none;
+                }    
             }
             .payment {
-                min-width: 130px;
-                width: calc(100% - 9rem);
+                @include breakpoint(max-width 1023px) {
+                    min-width: 130px;
+                    width: calc(100% - 9rem);
+                }
             }
             +.item-list {
-                display: none;
+                @include breakpoint(max-width 1023px) {
+                    display: none;
+                }    
             }
         }
         &.opened {
@@ -576,29 +611,72 @@ footer {
             }
         }
         .item-month {
-            width: 4.5rem;
+            @include breakpoint(1024px) {
+                margin-bottom: 1rem;
+                order: 1;
+            }
+            @include breakpoint(max-width 1023px) {
+                width: 4.5rem;
+            }
+        }
+        .payment {
+            @include breakpoint(1024px) {
+                order: 2;
+            }
         }
         .item-status {
-            width: 4.5rem;
-            text-align: right;
             word-break: keep-all;
+            @include breakpoint(1024px) {
+                position: relative;
+                order: 0;
+                z-index: 1;
+                &::after {
+                    @include beforeafter('', block);
+                    width: 1rem;
+                    height: 1rem;
+                    border-radius: 50%;
+                    margin: 1rem auto;
+                }
+            }
+            @include breakpoint(max-width 1023px) {
+                width: 4.5rem;
+                text-align: right;
+            }
             &.success {
                 color: $blue;
+                &::after {
+                    background-color: $blue;
+                }
             }
             &.overdue {
                 color: $red;
+                &::after {
+                    background-color: $red;
+                }
             }
             &.renewed {
                 color: $orange;
+                &::after {
+                    background-color: $orange;
+                }
             }
             &.existing {
                 color: $blue;
+                &::after {
+                    background-color: $blue;
+                }
             }
             &.expiring {
                 color: $green;
+                &::after {
+                    background-color: $green;
+                }
             }
             &.cancel {
                 color: $purple;
+                &::after {
+                    background-color: $purple;
+                }
             }
         }
         &.overdue {

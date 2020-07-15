@@ -297,7 +297,10 @@ footer span { display: block; }
 .item-section .item-detail.member .label-number .label { background-color: #396E75; }
 .item-section .item-detail.member .label-number span { color: #396E75; }
 .item-section .item-group { padding: 20px; background-color: #FAFAFA; border: solid transparent; border-width: 0 3px; }
+@media (min-width: 1024px) { .item-section .item-group { position: relative; display: flex; flex-direction: row-reverse; justify-content: space-between; }
+  .item-section .item-group::before { content: ""; display: block; position: absolute; top: calc(20px + 2.25rem + 0.5rem + 1px); left: 0; right: 0; border-bottom: 1px solid #3D71C0; z-index: 0; } }
 .item-section .item-group .item-title, .item-section .item-group .item-more { color: #808080; font-size: 1rem; line-height: 1; justify-content: center; -moz-transition: color 0.2s; -o-transition: color 0.2s; -webkit-transition: color 0.2s; transition: color 0.2s; }
+@media (min-width: 1024px) { .item-section .item-group .item-title, .item-section .item-group .item-more { display: none; } }
 .item-section .item-group .item-title i.icon, .item-section .item-group .item-more i.icon { margin-left: 0.35rem; }
 .item-section .item-group .item-more { cursor: pointer; }
 .item-section .item-group .item-more span.less { display: none; }
@@ -305,19 +308,33 @@ footer span { display: block; }
 .item-section .item-group .item-more.opened span.more { display: none; }
 .item-section .item-group .item-more.opened span.less { display: block; }
 .item-section .item-group .item-more.opened i.icon::before { display: block; -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
-.item-section .item-group .item-list { padding: 0.25rem 0; margin-bottom: 15px; font-size: 1.125rem; line-height: 1; }
+.item-section .item-group .item-list { display: flex; align-items: center; padding: 0.25rem 0; font-size: 1.125rem; line-height: 1; }
+@media (min-width: 1024px) { .item-section .item-group .item-list { justify-content: center; flex-wrap: wrap; flex-direction: column; } }
+@media (max-width: 1023px) { .item-section .item-group .item-list { margin-bottom: 15px; justify-content: space-between; } }
 .item-section .item-group .item-list i.icon { margin-right: 0.7125rem; }
-.item-section .item-group .item-list .payment { min-width: 130px; width: calc(100% - 9rem); }
-.item-section .item-group .item-list + .item-list { display: none; }
+@media (min-width: 1024px) { .item-section .item-group .item-list i.icon { display: none; } }
+@media (max-width: 1023px) { .item-section .item-group .item-list .payment { min-width: 130px; width: calc(100% - 9rem); } }
+@media (max-width: 1023px) { .item-section .item-group .item-list + .item-list { display: none; } }
 .item-section .item-group.opened .item-list + .item-list { display: flex; }
-.item-section .item-group .item-month { width: 4.5rem; }
-.item-section .item-group .item-status { width: 4.5rem; text-align: right; word-break: keep-all; }
+@media (min-width: 1024px) { .item-section .item-group .item-month { margin-bottom: 1rem; order: 1; } }
+@media (max-width: 1023px) { .item-section .item-group .item-month { width: 4.5rem; } }
+@media (min-width: 1024px) { .item-section .item-group .payment { order: 2; } }
+.item-section .item-group .item-status { word-break: keep-all; }
+@media (min-width: 1024px) { .item-section .item-group .item-status { position: relative; order: 0; z-index: 1; }
+  .item-section .item-group .item-status::after { content: ""; display: block; width: 1rem; height: 1rem; border-radius: 50%; margin: 1rem auto; } }
+@media (max-width: 1023px) { .item-section .item-group .item-status { width: 4.5rem; text-align: right; } }
 .item-section .item-group .item-status.success { color: #3D71C0; }
+.item-section .item-group .item-status.success::after { background-color: #3D71C0; }
 .item-section .item-group .item-status.overdue { color: #E662AD; }
+.item-section .item-group .item-status.overdue::after { background-color: #E662AD; }
 .item-section .item-group .item-status.renewed { color: #EF9D00; }
+.item-section .item-group .item-status.renewed::after { background-color: #EF9D00; }
 .item-section .item-group .item-status.existing { color: #3D71C0; }
+.item-section .item-group .item-status.existing::after { background-color: #3D71C0; }
 .item-section .item-group .item-status.expiring { color: #32B5A4; }
+.item-section .item-group .item-status.expiring::after { background-color: #32B5A4; }
 .item-section .item-group .item-status.cancel { color: #9768BF; }
+.item-section .item-group .item-status.cancel::after { background-color: #9768BF; }
 .item-section .item-group.overdue { border-left-color: #E662AD; }
 .item-section .item-group.renewed { border-left-color: #EF9D00; }
 .item-section .item-group.existing { border-left-color: #3D71C0; }
