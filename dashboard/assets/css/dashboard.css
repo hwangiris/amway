@@ -454,5 +454,3 @@ footer span { display: block; }
 .popup .popup-container input:checked ~ label { color: #38539A; }
 .popup .popup-container button { width: 100%; padding: 0.5rem; color: #fff; font-size: 1.125rem; background-color: #38539A; border: 0; -moz-border-radius: 2rem; -webkit-border-radius: 2rem; border-radius: 2rem; outline: 0; cursor: pointer; }
 .popup .popup-container button:hover { background-color: #314987; }
-
-/*# sourceMappingURL=dashboard.css.map */

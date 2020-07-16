@@ -29,4 +29,5 @@ line_comments = false
 # and then run:
 
 Encoding.default_external = "utf-8"
-sourcemap = true
+# sourcemap = true
+sourcemap = false
