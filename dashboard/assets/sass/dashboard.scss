@@ -23,7 +23,7 @@ header {
     width: 100%;
     color: $gray-500;
     background-color: $white;
-    z-index: 1;
+    z-index: 2;
     @include breakpoint(max-width 1023px) {
         background-color: $gray-100;
     }
@@ -525,15 +525,6 @@ footer {
             display: flex;
             flex-direction: row-reverse;
             justify-content: space-between;
-            &::before {
-                @include beforeafter('', block);
-                position: absolute;
-                top: calc(20px + 2.25rem + 0.5rem + 1px);
-                left: 0;
-                right: 0;
-                border-bottom: 1px solid $blue;
-                z-index: 0;
-            }
         }
         .item-title,
         .item-more {
@@ -577,19 +568,57 @@ footer {
             font-size: 1.125rem;
             line-height: 1;
             @include breakpoint(1024px) {
+                position: relative;
+                width: 16.6666666%;
                 justify-content: center;
                 flex-wrap: wrap;
                 flex-direction: column;
+                font-size: 1rem;
+                &::before {
+                    @include beforeafter('', block);
+                    position: absolute;
+                    top: calc(2.25rem + 0.5rem + 1px);
+                    left: 0;
+                    right: 0;
+                    border-bottom: 2px solid $blue;
+                    z-index: 0;
+                }
+                &:nth-child(2)::before {
+                    right: 50%;
+                }
+                &:nth-last-child(2)::before {
+                    left: 50%;
+                }
+                &.now {
+                    font-size: 1.125rem;
+                }
             }
             @include breakpoint(max-width 1023px) {
                 margin-bottom: 15px;
                 justify-content: space-between;
             }
+            &.disabled {
+                @include breakpoint(max-width 1023px) {
+                    display: none;
+                }
+                &::before {
+                    left: -50%;
+                    border-bottom-color: $gray-200;
+                    z-index: 1;
+                }
+                .item-status {
+                    @include breakpoint(1024px) {
+                        &::after {
+                            background-color: $gray-200;
+                        }
+                    }
+                }
+            }
             i.icon {
                 margin-right: 0.7125rem;
                 @include breakpoint(1024px) {
                     display: none;
-                }    
+                }
             }
             .payment {
                 @include breakpoint(max-width 1023px) {
@@ -597,17 +626,15 @@ footer {
                     width: calc(100% - 9rem);
                 }
             }
-            +.item-list {
+            &.now ~ .item-list {
                 @include breakpoint(max-width 1023px) {
                     display: none;
-                }    
+                }
             }
         }
         &.opened {
-            .item-list {
-                +.item-list {
-                    display: flex;
-                }
+            .item-list.now ~ .item-list {
+                display: flex;
             }
         }
         .item-month {
