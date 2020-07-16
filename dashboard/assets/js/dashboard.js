@@ -15,9 +15,7 @@ $(function() {
         $(".item-section").show();
         $(".search-input").val("");
     })
-    $('.search-send').click(function(){
-        let filter = $(this).siblings('.search-input').val(),
-            count = 0;
+    function search(filter,count) {
         $(".item-section").each(function () {
             var current = $(this).attr('data-detail');
             if (current.search(new RegExp(filter, "i")) < 0) {
@@ -33,27 +31,18 @@ $(function() {
                 $('.search-block').removeClass('show');
             }
         });
+    }
+    $('.search-send').click(function(){
+        let filter = $(this).siblings('.search-input').val(),
+            count = 0;
+        search(filter,count);
     });
     $('.search-input').keypress(function (e) {
         console.log('a');
         if (e.which == 13) {
             let filter = $(this).val(),
                 count = 0;
-            $(".item-section").each(function () {
-                var current = $(this).attr('data-detail');
-                if (current.search(new RegExp(filter, "i")) < 0) {
-                    $(this).hide();
-                } else {
-                    $(this).show();
-                    count++;
-                }
-                if(count > 0){
-                    $('.search-block').addClass('show');
-                    $('#length').text(count);
-                } else {
-                    $('.search-block').removeClass('show');
-                }
-            });
+            search(filter,count);
             return false;
         }
     });      
