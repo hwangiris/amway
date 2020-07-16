@@ -46,25 +46,28 @@
                 </div>
             </div>
             <div class="container-search desktop">
-                <form action="existing-search.html" method="post" class="search">
-                    <input type="text" name="search" id="search-input" placeholder="搜尋姓名 / 編號">
-                    <button type="submit" id="search-send">
-                <i class="icon icon-search"></i>
-            </button>
-                </form>
+                <div class="search">
+                    <input type="text" name="search" class="search-input" placeholder="搜尋姓名 / 編號">
+                    <button class="search-send">
+                        <i class="icon icon-search"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
     <div class="container-search container mobile">
-        <form action="existing-search.html" method="post" class="search">
-            <input type="text" name="search" id="search-input" placeholder="搜尋姓名 / 編號">
-            <button type="submit" id="search-send">
+        <div class="search">
+            <input type="text" name="search" class="search-input" placeholder="搜尋姓名 / 編號">
+            <button class="search-send">
                 <i class="icon icon-search"></i>
             </button>
-        </form>
+        </div>
     </div>
     <main>
         <div class="container pb-50">
+            <div class="search-block pt-20">
+                <span>共找到 <span id="length">5</span> 筆資料</span><i class="icon icon-x"></i>
+            </div>
             <div class="item-section pt-40">
                 <div class="item-detail distributor">
                     <div class="item-name-phone">
@@ -77,8 +80,8 @@
                         <span>9675661</span>
                     </div>
                 </div>
-                <div class="item distributor">
-                    <div class="item-group-name h2 mt-20 mb-10 font-weight-500">長客複合魚油膠囊－單瓶１２月</div>
+                <div class="item expiring distributor">
+                    <div class="item-group-name h2 mt-d-40 mt-m-20 mb-10 font-weight-500">長客複合魚油膠囊－單瓶１２月</div>
                     <div class="item-group expiring">
                         <div class="item-title mb-10 text-center">付款日期</div>
                         <div class="item-list now">
@@ -117,8 +120,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="item distributor">
-                    <div class="item-group-name h2 mt-20 mb-10 font-weight-500">長客複合益生菌－雙盒１２月</div>
+                <div class="item existing distributor">
+                    <div class="item-group-name h2 mt-d-40 mt-m-20 mb-10 font-weight-500">長客複合益生菌－雙盒１２月</div>
                     <div class="item-group existing">
                         <div class="item-title mb-10 text-center">付款日期</div>
                         <div class="item-list disabled">
@@ -170,8 +173,8 @@
                         <span>9675662</span>
                     </div>
                 </div>
-                <div class="item distributor">
-                    <div class="item-group-name h2 mt-20 mb-10 font-weight-500">長客複合益生菌－雙盒１２月</div>
+                <div class="item overdue distributor">
+                    <div class="item-group-name h2 mt-d-40 mt-m-20 mb-10 font-weight-500">長客複合益生菌－雙盒１２月</div>
                     <div class="item-group overdue">
                         <div class="item-title mb-10 text-center">付款日期</div>
                         <div class="item-list now">
@@ -210,8 +213,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="item distributor">
-                    <div class="item-group-name h2 mt-20 mb-10 font-weight-500">長客超能玻尿酸－單瓶６月</div>
+                <div class="item renewed distributor">
+                    <div class="item-group-name h2 mt-d-40 mt-m-20 mb-10 font-weight-500">長客超能玻尿酸－單瓶６月</div>
                     <div class="item-group renewed">
                         <div class="item-title mb-10 text-center">付款日期</div>
                         <div class="item-list now">
@@ -263,8 +266,8 @@
                         <span>9675663</span>
                     </div>
                 </div>
-                <div class="item member">
-                    <div class="item-group-name h2 mt-20 mb-10 font-weight-500">長客營養早餐－單罐組６月</div>
+                <div class="item renewed member">
+                    <div class="item-group-name h2 mt-d-40 mt-m-20 mb-10 font-weight-500">長客營養早餐－單罐組６月</div>
                     <div class="item-group renewed">
                         <div class="item-title mb-10 text-center">付款日期</div>
                         <div class="item-list now">
@@ -303,8 +306,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="item member">
-                    <div class="item-group-name h2 mt-20 mb-10 font-weight-500">長客超能玻尿酸－單瓶６月</div>
+                <div class="item expiring member">
+                    <div class="item-group-name h2 mt-d-40 mt-m-20 mb-10 font-weight-500">長客超能玻尿酸－單瓶６月</div>
                     <div class="item-group expiring">
                         <div class="item-title mb-10 text-center">付款日期</div>
                         <div class="item-list now">
@@ -356,8 +359,8 @@
                         <span>9675664</span>
                     </div>
                 </div>
-                <div class="item member">
-                    <div class="item-group-name h2 mt-20 mb-10 font-weight-500">長客複合益生菌－單盒６月</div>
+                <div class="item overdue member">
+                    <div class="item-group-name h2 mt-d-40 mt-m-20 mb-10 font-weight-500">長客複合益生菌－單盒６月</div>
                     <div class="item-group overdue">
                         <div class="item-title mb-10 text-center">付款日期</div>
                         <div class="item-list now">
@@ -396,8 +399,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="item member">
-                    <div class="item-group-name h2 mt-20 mb-10 font-weight-500">長客晶明錠－單罐組１２月</div>
+                <div class="item renewed member">
+                    <div class="item-group-name h2 mt-d-40 mt-m-20 mb-10 font-weight-500">長客晶明錠－單罐組１２月</div>
                     <div class="item-group renewed">
                         <div class="item-title mb-10 text-center">付款日期</div>
                         <div class="item-list now">
@@ -436,8 +439,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="item member">
-                    <div class="item-group-name h2 mt-20 mb-10 font-weight-500">長客複合益生菌－雙盒６月</div>
+                <div class="item existing member">
+                    <div class="item-group-name h2 mt-d-40 mt-m-20 mb-10 font-weight-500">長客複合益生菌－雙盒６月</div>
                     <div class="item-group existing">
                         <div class="item-title mb-10 text-center">付款日期</div>
                         <div class="item-list now">
@@ -489,8 +492,8 @@
                         <span>9675665</span>
                     </div>
                 </div>
-                <div class="item member">
-                    <div class="item-group-name h2 mt-20 mb-10 font-weight-500">長客複合益生菌－雙盒１２月</div>
+                <div class="item expiring member">
+                    <div class="item-group-name h2 mt-d-40 mt-m-20 mb-10 font-weight-500">長客複合益生菌－雙盒１２月</div>
                     <div class="item-group expiring">
                         <div class="item-title mb-10 text-center">付款日期</div>
                         <div class="item-list disabled">
@@ -529,8 +532,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="item member">
-                    <div class="item-group-name h2 mt-20 mb-10 font-weight-500">長客營養早餐－單罐組１２月</div>
+                <div class="item overdue member">
+                    <div class="item-group-name h2 mt-d-40 mt-m-20 mb-10 font-weight-500">長客營養早餐－單罐組１２月</div>
                     <div class="item-group overdue">
                         <div class="item-title mb-10 text-center">付款日期</div>
                         <div class="item-list now">

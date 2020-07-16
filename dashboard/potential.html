@@ -13,46 +13,61 @@
 <body>
     <header>
         <div class="fixed-d-group">
-            <h1 class="my-0 text-center font-weight-500">
-                <img src="assets/images/amway_logo.svg" alt="安麗">
-                <span>長客計畫</span>
-            </h1>
-            <ul class="sort text-center">
-                <li>
-                    <a class="existing" href="existing.html">現有訂單</a>
-                </li>
-                <li>
-                    <a class="expiring" href="expiring.html">即將到期</a>
-                </li>
-                <li>
-                    <a class="cancel" href="cancel.html">解約</a>
-                </li>
-                <li>
-                    <a class="potential active" href="potential.html">潛力名單</a>
-                </li>
-            </ul>
-        </div>
-        <div class="distributor-member">
-            <div class="distributor">
-                <div class="label">直銷商</div>
-                <div class="count">人數: 15</div>
+            <div class="container-1300">
+                <h1 class="my-0 text-center font-weight-500">
+                    <img src="assets/images/amway_logo.svg" alt="安麗">
+                    <span>長客計畫</span>
+                </h1>
+                <ul class="sort text-center">
+                    <li>
+                        <a class="existing" href="existing.html">現有訂單</a>
+                    </li>
+                    <li>
+                        <a class="expiring" href="expiring.html">即將到期</a>
+                    </li>
+                    <li>
+                        <a class="cancel" href="cancel.html">解約</a>
+                    </li>
+                    <li>
+                        <a class="potential active" href="potential.html">潛力名單</a>
+                    </li>
+                </ul>
             </div>
-            <div class="member">
-                <div class="label">會員</div>
-                <div class="count">人數: 15</div>
+        </div>
+        <div class="container-1300">
+            <div class="distributor-member">
+                <div class="distributor">
+                    <div class="label text-center">直銷商</div>
+                    <div class="count">人數: 15</div>
+                </div>
+                <div class="member">
+                    <div class="label text-center">會員</div>
+                    <div class="count">人數: 15</div>
+                </div>
+            </div>
+            <div class="container-search desktop">
+                <div class="search">
+                    <input type="text" name="search" class="search-input" placeholder="搜尋姓名 / 編號">
+                    <button class="search-send">
+                        <i class="icon icon-search"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
-    <div class="container-search container">
-        <form action="potential-search.html" method="post" class="search">
-            <input type="text" name="search" id="search-input" placeholder="搜尋姓名 / 編號">
-            <button type="submit" id="search-send">
+    <div class="container-search container mobile">
+        <div class="search">
+            <input type="text" name="search" class="search-input" placeholder="搜尋姓名 / 編號">
+            <button class="search-send">
                 <i class="icon icon-search"></i>
             </button>
-        </form>
+        </div>
     </div>
     <main>
         <div class="container pb-50">
+            <div class="search-block pt-20">
+                <span>共找到 <span id="length">5</span> 筆資料</span><i class="icon icon-x"></i>
+            </div>
             <div class="item-section pt-40">
                 <div class="item-detail distributor">
                     <div class="item-name-phone">
@@ -66,6 +81,14 @@
                     </div>
                 </div>
                 <div class="item-potential">
+                    <div class="item-list">
+                        <div class="item-title h2">晶明錠</div>
+                        <div class="item-time d-flex align-items-center"><i class="icon icon-cart"></i><span>三個月買兩次以上</span></div>
+                    </div>
+                    <div class="item-list">
+                        <div class="item-title h2">複合魚油膠囊</div>
+                        <div class="item-time d-flex align-items-center"><i class="icon icon-cart"></i><span>十二個月買五次以上</span></div>
+                    </div>
                     <div class="item-list">
                         <div class="item-title h2">晶明錠</div>
                         <div class="item-time d-flex align-items-center"><i class="icon icon-cart"></i><span>三個月買兩次以上</span></div>

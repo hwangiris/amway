@@ -10,6 +10,53 @@ $(function() {
         $('html,body').animate({ scrollTop: 0 });
         return false;
     });
+    $('.icon-x').click(function(){
+        $(this).parent().hide();
+        $(".item-section").show();
+        $(".search-input").val("");
+    })
+    $('.search-send').click(function(){
+        let filter = $(this).siblings('.search-input').val(),
+            count = 0;
+        $(".item-section").each(function () {
+            var current = $(this).attr('data-detail');
+            if (current.search(new RegExp(filter, "i")) < 0) {
+                $(this).hide();
+            } else {
+                $(this).show();
+                count++;
+            }
+            if(count > 0){
+                $('.search-block').addClass('show');
+                $('#length').text(count);
+            } else {
+                $('.search-block').removeClass('show');
+            }
+        });
+    });
+    $('.search-input').keypress(function (e) {
+        console.log('a');
+        if (e.which == 13) {
+            let filter = $(this).val(),
+                count = 0;
+            $(".item-section").each(function () {
+                var current = $(this).attr('data-detail');
+                if (current.search(new RegExp(filter, "i")) < 0) {
+                    $(this).hide();
+                } else {
+                    $(this).show();
+                    count++;
+                }
+                if(count > 0){
+                    $('.search-block').addClass('show');
+                    $('#length').text(count);
+                } else {
+                    $('.search-block').removeClass('show');
+                }
+            });
+            return false;
+        }
+    });      
     $(window).load(function() {
         let headerHeight = Math.ceil($('header').outerHeight()),
             searchHeight = $('.container-search.mobile').outerHeight(),
@@ -31,11 +78,11 @@ $(function() {
         $(window).scroll(function() {
             let scroll = $(this).scrollTop(),
                 height = $(this).height();
-            if (scroll >= searchTop) {
-                $('header').addClass('scroll');
-            } else {
-                $('header').removeClass('scroll');
-            }
+            // if (scroll >= searchTop) {
+            //     $('header').addClass('scroll');
+            // } else {
+            //     $('header').removeClass('scroll');
+            // }
             if (scroll >= height) {
                 $('#top').fadeIn();
             } else {

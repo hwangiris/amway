@@ -345,7 +345,7 @@ footer {
             display: none;
         }
     }
-    form {
+    .search {
         position: relative;
     }
     &:hover {
@@ -360,6 +360,7 @@ footer {
         font-size: 1rem;
         background-color: $white;
         border: none;
+        outline: 0;
         @include border-radius(2rem);
         @include breakpoint(375px) {
             font-size: 1.125rem;
@@ -369,7 +370,6 @@ footer {
         }
         &:active,
         &:focus {
-            outline: 0;
             +button {
                 @include opacity(1);
             }
@@ -384,6 +384,7 @@ footer {
         font-size: 1.125rem;
         background-color: transparent;
         border: 0;
+        outline: 0;
         @include translateY(-50%);
         @include opacity(0.5);
         @include transition(opacity 0.2s);
@@ -397,16 +398,19 @@ footer {
 }
 
 .search-block {
-    display: flex;
+    display: none;
     align-items: center;
-    .icon,
-    span {
+    &.show {
+        display: flex;
+    }
+    >.icon,
+    >span {
         display: block;
     }
-    .icon {
+    >.icon {
         color: $gray-500;
     }
-    span {
+    >span {
         color: $black;
         margin-right: 5px;
     }
@@ -515,16 +519,63 @@ footer {
             }
         }
     }
+    .item {
+        @include breakpoint(1024px) {
+            display: flex;
+            padding: 30px;
+            margin-bottom: 20px;
+            background-color: $gray-bg;
+            border: solid transparent;
+            border-width: 0 3px;
+            justify-content: space-between;
+            &.overdue {
+                border-left-color: $red;
+            }
+            &.renewed {
+                border-left-color: $orange;
+            }
+            &.existing {
+                border-left-color: $blue;
+            }
+            &.expiring {
+                border-left-color: $green;
+            }
+            &.cancel {
+                border-left-color: $purple;
+            }
+            .item-group-name {
+                width: 260px;
+            }
+        }
+    }
     .item-group {
-        padding: 20px;
-        background-color: $gray-bg;
-        border: solid transparent;
-        border-width: 0 3px;
         @include breakpoint(1024px) {
             position: relative;
             display: flex;
+            width: calc(100% - 320px);
             flex-direction: row-reverse;
             justify-content: space-between;
+        }
+        @include breakpoint(max-width 1023px) {
+            padding: 20px;
+            background-color: $gray-bg;
+            border: solid transparent;
+            border-width: 0 3px;
+            &.overdue {
+                border-left-color: $red;
+            }
+            &.renewed {
+                border-left-color: $orange;
+            }
+            &.existing {
+                border-left-color: $blue;
+            }
+            &.expiring {
+                border-left-color: $green;
+            }
+            &.cancel {
+                border-left-color: $purple;
+            }
         }
         .item-title,
         .item-more {
@@ -577,7 +628,7 @@ footer {
                 &::before {
                     @include beforeafter('', block);
                     position: absolute;
-                    top: calc(2.25rem + 0.5rem + 1px);
+                    top: calc(2.25rem + 0.5rem - 1px);
                     left: 0;
                     right: 0;
                     border-bottom: 2px solid $blue;
@@ -706,31 +757,28 @@ footer {
                 }
             }
         }
-        &.overdue {
-            border-left-color: $red;
-        }
-        &.renewed {
-            border-left-color: $orange;
-        }
-        &.existing {
-            border-left-color: $blue;
-        }
-        &.expiring {
-            border-left-color: $green;
-        }
-        &.cancel {
-            border-left-color: $purple;
-        }
     }
     .item-potential {
+        @include breakpoint(1024px) {
+            display: flex;
+            flex-wrap: wrap;
+            padding-right: 25%;
+            margin-bottom: -20px;
+        }
         .item-list {
             padding: 0 20px;
             border: solid transparent;
             border-width: 0 3px;
             border-left-color: $dark-orange;
-            +.item-list {
-                margin-top: 20px;
-            }
+            @include breakpoint(1024px) {
+                margin-bottom: 20px;
+                width: 33.3333%;
+            }    
+            @include breakpoint(max-width 1023px) {
+                +.item-list {
+                    margin-top: 20px;
+                }
+            }    
         }
         .item-title {
             margin-bottom: 5px;
