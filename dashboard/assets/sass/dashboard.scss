@@ -674,7 +674,8 @@ footer {
             .payment {
                 @include breakpoint(max-width 1023px) {
                     min-width: 130px;
-                    width: calc(100% - 9rem);
+                    max-width: calc(100% - 9rem);
+                    width: 9rem;
                 }
             }
             &.now ~ .item-list {
