@@ -403,7 +403,7 @@ footer span { display: block; }
 .item-section .item-group .item-more.opened i.icon::before { display: block; -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); transform: rotate(180deg); }
 .item-section .item-group .item-list { display: flex; align-items: center; padding: 0.25rem 0; font-size: 1.125rem; line-height: 1; }
 @media (min-width: 1024px) { .item-section .item-group .item-list { position: relative; width: 16.6666666%; justify-content: center; flex-wrap: wrap; flex-direction: column; font-size: 1rem; }
-  .item-section .item-group .item-list::before { content: ""; display: block; position: absolute; top: calc(2.25rem + 0.5rem - 1px); left: 0; right: 0; border-bottom: 2px solid #3D71C0; z-index: 0; }
+  .item-section .item-group .item-list::before { content: ""; display: block; position: absolute; top: calc(2.25rem + 0.5rem + 1px); left: 0; right: 0; border-bottom: 2px solid #3D71C0; z-index: 0; }
   .item-section .item-group .item-list:nth-child(2)::before { right: 50%; }
   .item-section .item-group .item-list:nth-last-child(2)::before { left: 50%; }
   .item-section .item-group .item-list.now { font-size: 1.125rem; } }

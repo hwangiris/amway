@@ -628,7 +628,7 @@ footer {
                 &::before {
                     @include beforeafter('', block);
                     position: absolute;
-                    top: calc(2.25rem + 0.5rem - 1px);
+                    top: calc(2.25rem + 0.5rem + 1px);
                     left: 0;
                     right: 0;
                     border-bottom: 2px solid $blue;
