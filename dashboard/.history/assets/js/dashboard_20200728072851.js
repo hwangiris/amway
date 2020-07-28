@@ -34,7 +34,6 @@ $(function() {
 				$(this).show();
 				count++;
 			}
-			$('#length').text(count);
 			if(count > 0){
 				$('#length').text(count);
 				$(".search-send i.icon").addClass('icon-close').removeClass('icon-search');
