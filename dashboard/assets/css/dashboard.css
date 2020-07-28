@@ -267,7 +267,7 @@ header { position: fixed; top: 0; left: 0; width: 100%; color: #808080; backgrou
 @media (min-width: 1024px) { header .fixed-d-group { background-color: #38539A; } }
 @media (min-width: 1024px) { header > .container-1300 { border-bottom: 1px solid rgba(191, 191, 191, 0.5); } }
 header .container-1300 { max-width: 1300px; margin-left: auto; margin-right: auto; }
-@media (min-width: 1024px) { header .container-1300 { display: flex; align-items: center; justify-content: space-between; } }
+@media (min-width: 1024px) { header .container-1300 { display: flex; align-items: center; justify-content: space-between; padding-left: 15px; padding-right: 15px; } }
 header h1 { padding-top: 20px; padding-bottom: 20px; color: #fff; -moz-transition: padding 0.2s; -o-transition: padding 0.2s; -webkit-transition: padding 0.2s; transition: padding 0.2s; }
 @media (max-width: 1023px) { header h1 { background-color: #38539A; } }
 header h1 img { display: inline-block; height: 2.25rem; vertical-align: middle; }
@@ -318,7 +318,7 @@ header.scroll .distributor-member { display: flex; padding-top: 10px; padding-bo
 
 main { margin-left: auto; margin-right: auto; padding: 0 15px; }
 @media (min-width: 375px) { main { padding: 0 20px; } }
-@media (min-width: 1024px) { main { max-width: 1300px; padding: 0; } }
+@media (min-width: 1024px) { main { max-width: 1300px; padding: 0 15px; } }
 
 footer { position: absolute; left: 0; right: 0; bottom: 0; margin-left: auto; margin-right: auto; color: #fff; background-color: #38539A; }
 @media (min-width: 1024px) { footer { text-align: center; } }
