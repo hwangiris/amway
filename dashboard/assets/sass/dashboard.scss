@@ -617,6 +617,9 @@ footer {
                 border-left-color: $orangeRed;
             }
         }
+        @include breakpoint(max-width 413px) {
+            padding: 20px 10px;
+        }
         .item-title,
         .item-more {
             color: $gray-500;
@@ -688,6 +691,9 @@ footer {
                 margin-bottom: 15px;
                 justify-content: space-between;
             }
+            @include breakpoint(max-width 374px) {
+                font-size: 1rem;
+            }
             &.disabled {
                 @include breakpoint(max-width 1023px) {
                     display: none;
@@ -706,16 +712,25 @@ footer {
                 }
             }
             i.icon {
-                margin-right: 0.7125rem;
+                margin-right: 0.5rem;
+                @include breakpoint(414px) {
+                    margin-right: 0.7125rem;
+                }
                 @include breakpoint(1024px) {
                     display: none;
                 }
+                @include breakpoint(max-width 374px) {
+                    display: none;
+                }    
             }
             .payment {
                 @include breakpoint(max-width 1023px) {
                     min-width: 130px;
-                    max-width: calc(100% - 9rem);
-                    width: 9rem;
+                    max-width: calc(100% - 8rem);
+                    width: 8.5rem;
+                }
+                @include breakpoint(max-width 374px) {
+                    min-width: auto;
                 }
             }
             &.now ~ .item-list {
@@ -735,7 +750,10 @@ footer {
                 order: 1;
             }
             @include breakpoint(max-width 1023px) {
-                width: 4.5rem;
+                width: 4rem;
+            }
+            @include breakpoint(max-width 374px) {
+                width: 5rem;
             }
         }
         .payment {
@@ -758,7 +776,7 @@ footer {
                 }
             }
             @include breakpoint(max-width 1023px) {
-                width: 4.5rem;
+                width: 5.5rem;
                 text-align: right;
             }
             &.success {
