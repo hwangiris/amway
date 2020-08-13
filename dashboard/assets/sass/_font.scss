@@ -25,6 +25,12 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-info {
+    &:before {
+        content: $icon-info; 
+    }
+}  
+
 .icon-close {
     &:before {
         content: $icon-close; 

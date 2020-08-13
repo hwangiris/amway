@@ -1,6 +1,7 @@
 var ClsCookie;
 $(function() {
 	var width = $(window).width();
+	$('.popup').hide();
 	$('.popup-btn').click(function() {
 		$('.popup').fadeOut();
 		if($("#hidden_next").is(':checked')){
@@ -40,7 +41,8 @@ $(function() {
 				$(".search-send i.icon").addClass('icon-close').removeClass('icon-search');
 			}
 		});
-		if(item_count == hide_count) alert("查無資料")
+		$('html,body').animate({ scrollTop: 0 });
+		if(item_count == hide_count) alert("查無資料");
 	}
 	$('.search-send').click(function(){
 		var filter = $(this).siblings('.search-input').val(),
@@ -61,16 +63,23 @@ $(function() {
 	$('.icon-x, .search-send').click(function(){
 		closeSearch();
 	})
+	if (location.href.match('potential')) {
+		$('.container-search').addClass('has-info');
+	}
+
+	$('.info-msg').click(function(){
+		$('.popup').fadeIn();
+	});
+
 	$(window).load(function() {
-		var headerHeight = Math.ceil($('header').outerHeight()),
-			searchTop = $('.container-search.mobile').offset().top,
-			searchHeight = $('.container-search.mobile').outerHeight(),
-			memberFirstTop = $('.item-detail.member').first().offset().top - headerHeight + 34;
 		if(width > 1024){
-			var distributorFirstTop = $('.item-detail.distributor').first().offset().top - headerHeight - 34;
+			var headerHeight = Math.ceil($('header').outerHeight()) + 80;
 		} else {
-			var distributorFirstTop = $('.item-detail.distributor').first().offset().top - searchTop - searchHeight + 34;
+			var headerHeight = Math.ceil($('header').outerHeight()) + 40;
 		}
+		var memberFirstTop = $('.item-detail.member').first().offset().top - headerHeight + 34;
+			console.log($('.item-detail.distributor').first().offset().top, headerHeight),
+			distributorFirstTop = $('.item-detail.distributor').first().offset().top - headerHeight - 20;
 		$('body').css({
 			'padding-top': headerHeight,
 			'padding-bottom': $('footer').outerHeight()
@@ -89,6 +98,11 @@ $(function() {
 			$('html,body').animate({ scrollTop: memberFirstTop });
 			return false;
 		});
+		$('.item-more').each(function(){
+			if($(this).siblings('.item-list.disabled').length >= 5) {
+				$(this).hide();
+			}
+		})
 		$(window).scroll(function() {
 			let scroll = $(this).scrollTop(),
 				height = $(this).height();

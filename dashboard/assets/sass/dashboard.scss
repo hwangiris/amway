@@ -21,9 +21,16 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    padding-bottom: 15px;
     color: $gray-500;
     background-color: $white;
     z-index: 2;
+    @include breakpoint(375px) {
+        padding-bottom: 20px;
+    }
+    @include breakpoint(1024px) {
+        padding-bottom: 0;
+    }
     @include breakpoint(max-width 1023px) {
         background-color: $gray-100;
     }
@@ -45,6 +52,8 @@ header {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            padding-left: 15px;
+            padding-right: 15px;
         }
     }
     h1 {
@@ -149,6 +158,10 @@ header {
                         color: $purple;
                         border-bottom-color: $purple;
                     }
+                    &.stopped {
+                        color: $orangeRed;
+                        border-bottom-color: $orangeRed;
+                    }
                     &.potential {
                         color: $dark-orange;
                         border-bottom-color: $dark-orange;
@@ -217,6 +230,7 @@ header {
         }
     }
     &.scroll {
+        padding-bottom: 10px;
         h1 {
             padding-top: 10px;
             padding-bottom: 10px;
@@ -257,7 +271,7 @@ main {
     }
     @include breakpoint(1024px) {
         max-width: 1300px;
-        padding: 0;
+        padding: 0 15px;
     }
 }
 
@@ -324,11 +338,12 @@ footer {
 }
 
 .container-search {
+    position: relative;
     max-width: 640px;
-    padding: 0 15px 15px;
+    padding: 0 15px;
     color: $gray-500;
     @include breakpoint(375px) {
-        padding: 0 20px 20px;
+        padding: 0 20px;
     }
     @include breakpoint(max-width 1023px) {
         margin-left: auto;
@@ -343,6 +358,25 @@ footer {
         padding: 0;
         &.mobile {
             display: none;
+        }
+    }
+    > i.icon {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        color: $dark-orange;
+        font-size: 1.75rem;
+        @include transition(color 0.2s);
+        @include translateY(-50%);
+    }
+    &.has-info {
+        padding-left: 50px;
+        @include breakpoint(375px) {
+            padding-left: 60px;
+        }
+        > i.icon {
+            display: block;
         }
     }
     .search {
@@ -543,6 +577,9 @@ footer {
             &.cancel {
                 border-left-color: $purple;
             }
+            &.stopped {
+                border-left-color: $orangeRed;
+            }
             .item-group-name {
                 width: 260px;
             }
@@ -575,6 +612,9 @@ footer {
             }
             &.cancel {
                 border-left-color: $purple;
+            }
+            &.stopped {
+                border-left-color: $orangeRed;
             }
         }
         .item-title,
@@ -628,7 +668,7 @@ footer {
                 &::before {
                     @include beforeafter('', block);
                     position: absolute;
-                    top: calc(2.25rem + 0.5rem + 1px);
+                    top: calc(2.25rem + 0.5rem);
                     left: 0;
                     right: 0;
                     border-bottom: 2px solid $blue;
@@ -638,7 +678,7 @@ footer {
                     right: 50%;
                 }
                 &:nth-last-child(2)::before {
-                    left: 50%;
+                    left: 50% !important;
                 }
                 &.now {
                     font-size: 1.125rem;
@@ -755,6 +795,12 @@ footer {
                 color: $purple;
                 &::after {
                     background-color: $purple;
+                }
+            }
+            &.stopped {
+                color: $orangeRed;
+                &::after {
+                    background-color: $orangeRed;
                 }
             }
         }
