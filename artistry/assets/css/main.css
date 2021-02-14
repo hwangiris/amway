@@ -5479,7 +5479,6 @@ section.trailer p > span > span {
 
 .texture-show {
   position: relative;
-  z-index: 2;
 }
 .texture-show::before, .texture-show::after {
   position: absolute;
