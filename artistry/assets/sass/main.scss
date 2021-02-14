@@ -333,7 +333,6 @@ section {
 
 .texture-show {
     position: relative;
-    z-index: 2;
     &::before, &::after {
         position: absolute;
         bottom: 0;
@@ -356,7 +355,7 @@ section {
             top: 50%;
         }
         &.texture-d-show::after {
-            background-image: url('../images/texture@3x.png');
+            background-image: url('../images/texture@2x.png');
         }
     }
     @include breakpoint(max-width 1023px) {
@@ -365,7 +364,7 @@ section {
             top: 30%;
         }
         &.texture-m-show::after {
-            background-image: url('../images/texture@3x.png');
+            background-image: url('../images/texture@2x.png');
         }
     }
 }
