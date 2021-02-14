@@ -5508,7 +5508,7 @@ section.trailer p > span > span {
     top: 50%;
   }
   .texture-show.texture-d-show::after {
-    background-image: url("../images/texture@3x.png");
+    background-image: url("../images/texture@2x.png");
   }
 }
 @media (max-width: 1023px) {
@@ -5518,7 +5518,7 @@ section.trailer p > span > span {
     top: 30%;
   }
   .texture-show.texture-m-show::after {
-    background-image: url("../images/texture@3x.png");
+    background-image: url("../images/texture@2x.png");
   }
 }
 
