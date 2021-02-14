@@ -1,0 +1,43 @@
+$colors: () !default;
+$colors: map-merge((
+	"light-green": ($lightgreen),
+	"green": ($green),
+	"light-blue": ($lightblue),
+	"blue": ($blue),
+	"darkblue": ($darkblue),
+	"light-orange": ($lightorange),
+	"orange": ($orange),
+	"white": ($white),
+	"gray": ($gray),
+	"dark": ($dark),
+	"black": ($black)
+), $colors);
+$typo: $h1, $h2, $h3, $h4, $h5, $h6;
+$typo-m: $h1-m, $h2-m, $h3-m, $h4-m, $h5-m, $h6-m;
+$weight: 100, 300, 400, 500;
+$line: 1, 1.125, 1.25, 1.5, 1.75, 2;
+@for $i from 1 through length($typo) {
+	h#{$i}, .h#{$i} {
+		margin-top: 1em;
+		margin-bottom: 1em;
+		font-size: #{nth($typo-m, $i)};
+		@include breakpoint(768px) {
+			font-size: #{nth($typo, $i)};
+		}
+	}
+}
+@for $i from 1 through length($line) {
+	.line-height-#{nth($line, $i) * 1000} {
+		line-height: #{nth($line, $i)};
+	}
+}
+@for $i from 1 through length($weight) {
+	.font-weight-#{nth($weight, $i)} {
+		font-weight: #{nth($weight, $i)};
+	}
+}
+@each $color, $value in $colors {
+	.color-#{$color} {
+		color: $value;
+	}
+}

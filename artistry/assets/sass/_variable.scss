@@ -1,0 +1,48 @@
+$container: 1170px;
+
+//
+$h1: 5.25rem; //84px
+$h2: 4.5rem; //72px
+$h3: 2.625rem; //42px
+$h4: 1.75rem; //28px
+$h5: 1.3125rem; //21px
+$h6: 1.125rem; //18px
+//
+$h1-m: 4.5rem; //72px
+$h2-m: 4rem; //64px
+$h3-m: 2.25rem; //36px
+$h4-m: 1.5rem; //24px
+$h5-m: 1.25rem; //20px
+$h6-m: 1.125rem; //18px
+
+//
+$white: #fff !default; //background
+$gray: #707070 !default;
+$dark: #394148 !default;
+$black: #000 !default;
+
+$lightgreen: #cce2ab;
+$green: #1b6f2f;
+$lightblue: rgba(#41bdcb, 0.4);
+$blue: #46bdcb;
+$darkblue: #008e8f;
+$lightorange: #f3dcc7;
+$orange: #de9c14;
+
+//
+$surface: $black;
+$primary: $green !default;
+$primary-variant: $lightgreen !default;
+$secondary: $blue !default;
+$secondary-variant: $lightblue !default;
+$background: $white !default;
+$text: $dark !default;
+//
+$facebook: #1877f2 !default;
+$line: #00c200 !default;
+$instagram: #dd2a7b !default;
+$weibo: #e6162d !default;
+$rss: #ff5700 !default;
+$twitter: #00acee !default;
+$whatapp: #4fce5d !default;
+$mail: $surface !default;

@@ -1,0 +1,162 @@
+header {
+    // position: fixed;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    background-color: $white;
+    z-index: 5;
+    @media screen and (min-width: 1024px) {
+        padding-top: 1.65rem;
+        padding-bottom: 1.65rem;
+    }
+    .container-fluid {
+        position: relative;
+    }
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    a.logo {
+        display: block;
+        img {
+            display: block;
+            height: 2rem;
+            @media screen and (min-width: 1200px) {
+                height: 2.25rem;
+            }
+        }
+    }
+}
+
+.hamburger {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 30px;
+    height: 23px;
+    @include translateY(-50%);
+    z-index: 1;
+    @media screen and (min-width: 1024px) {
+        display: none;
+    }
+    span {
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: $black;
+        @include transition(all 0.3s);
+        + span {
+            margin-top: 7px;
+        }
+    }
+    &.active {
+        span {
+            position: absolute;
+            + span {
+                margin-top: 0;
+            }
+            &:nth-child(1) {
+                @include transform(rotate(45deg) translate(7px, 7px));
+            }
+            &:nth-child(3) {
+                @include transform(rotate(-45deg) translate(-7px, 7px));
+            }
+            &:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+}
+
+nav {
+    @media screen and (max-width: 1023px) {
+        display: none;
+        position: fixed;
+        top: 4.5rem;
+        right: 0;
+        height: calc(100% - 4.5rem);
+        padding: 20px;
+        background-color: rgba($white, 0.95);
+    }
+    ul {
+        @include listreset(0, 0, none);
+        font-size: 0;
+        @media screen and (max-width: 1023px) {
+            display: table;
+            margin-left: auto;
+            margin-right: auto;
+            width: calc((1.3125rem * 7) + 40px);
+        }
+        li {
+            @media screen and (max-width: 1023px) {
+                text-align: center;
+            }
+            @media screen and (min-width: 1024px) {
+                display: inline-block;
+            }
+            a {
+                position: relative;
+                display: block;
+                color: $black;
+                font-size: $h5;
+                @media screen and (min-width: 1024px) {
+                    line-height: 1;
+                }
+                &::before {
+                    @include beforeafter('', block);
+                    position: absolute;
+                    bottom: 0;
+                    left: auto;
+                    right: 0;
+                    width: 0;
+                    height: 1rem;
+                    background-color: $lightgreen;
+                    @include transition(all 0.3s);
+                    z-index: -1;
+                }
+                &:hover {
+                    &::before {
+                        left: 0;
+                        right: auto;
+                        width: 100%;
+                        @include transition(all 0.3s);
+                    }
+                }
+            }
+            + li {
+                @media screen and (max-width: 1023px) {
+                    border-top: 1px solid rgba($gray, 0.15);
+                }
+                @media screen and (min-width: 1024px) {
+                    margin-left: 30px;
+                }
+                @media screen and (min-width: 1200px) {
+                    margin-left: 40px;
+                }
+                @media screen and (min-width: 1330px) {
+                    margin-left: 60px;
+                }
+                @media screen and (min-width: 1440px) {
+                    margin-left: 80px;
+                }
+            }
+        }
+    }
+}
+
+.blank {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    &.opened {
+        z-index: 5;
+    }
+}
