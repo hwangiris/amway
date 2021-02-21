@@ -59,9 +59,6 @@ section {
                     font-size: 1.6875rem;
                 }
             }
-            p span {
-                display: inline-block;
-            }
         }
     }
     > .container-fluid {
@@ -188,6 +185,11 @@ section {
             align-items: start;
             + p {
                 display: none;
+            }
+        }
+        .h3 {
+            @include breakpoint(max-width 1023px) {
+                font-size: $h4;
             }
         }
         .plus-more {
@@ -386,11 +388,6 @@ section {
                 left: 100%;
             }
         }
-        .product-bottom {
-            @include breakpoint(max-width 413px) {
-                width: calc(100% - 160px);
-            }
-        }
         .product-cc {
             @include opacity(0.5);
         }
@@ -410,11 +407,43 @@ section {
             }
         }
     }
+    &#phyto {
+        @media screen and (max-width: 1023px) {
+            display: none;
+        }
+    } 
     &#force {
         .col-md-4 {
             + .col-md-4 {
                 @media screen and (max-width: 1023px) {
                     border-top: 1px solid rgba($dark, 0.15);
+                }
+            }
+        }
+    }
+    &.accordion-section  {
+        .title {
+            > .plus-more {
+                @include breakpoint(1024px) {
+                    display: none;
+                }
+            }
+            @include breakpoint(max-width 1023px) {
+                position: relative;
+                padding-right: 1.875rem;
+                align-items: center;
+                > .h3 {
+                    font-size: $h4;
+                }
+                > svg {
+                    width: 1.75rem;
+                    height: 1.75rem;
+                }
+                > .plus-more {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    @include translateY(-50%);
                 }
             }
         }
@@ -429,11 +458,17 @@ section {
         display: table;
         margin-left: auto;
         margin-right: auto;
-        padding: 15px 70px;
         color: $white;
         background-color: $blue;
         @include border-radius(50px);
         @include translateY(50%);
+        @media screen and (min-width: 1024px) {
+            padding: 15px 70px;
+        }
+        @media screen and (max-width: 1023px) {
+            padding: 15px 50px;
+            font-size: 1rem;
+        }
     }
     .chart-img {
         padding: 20px 30px;

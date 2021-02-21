@@ -34,6 +34,7 @@ $unit: (1/12)*100%;
 $space: 0, 5, 10, 15, 20, 30, 40, 50, 60, 70, 80;
 $align: left, center, right;
 $line: 1, 1.125, 1.25, 1.5, 1.75, 2;
+$display: none, block, inline-block, flex, inline-flex, grid, inline-grid;
 @for $i from 1 through 12 {
     .col-#{$i} {
         width: #{$i*$unit};
@@ -95,6 +96,11 @@ $line: 1, 1.125, 1.25, 1.5, 1.75, 2;
 @for $i from 1 through length($line) {
 	.line-height-#{nth($line, $i) * 1000} {
 		line-height: #{nth($line, $i)};
+	}
+}
+@for $i from 1 through length($display) {
+    .display-#{nth($display,$i)} {
+		display: #{nth($display, $i)};
 	}
 }
 @include breakpoint(414px) {
@@ -159,6 +165,11 @@ $line: 1, 1.125, 1.25, 1.5, 1.75, 2;
     @for $i from 1 through length($line) {
         .line-height-xs-#{nth($line, $i) * 1000} {
             line-height: #{nth($line, $i)};
+        }
+    }
+    @for $i from 1 through length($display) {
+        .display-xs-#{nth($display,$i)} {
+            display: #{nth($display, $i)};
         }
     }
 }
@@ -226,6 +237,11 @@ $line: 1, 1.125, 1.25, 1.5, 1.75, 2;
             line-height: #{nth($line, $i)};
         }
     }
+    @for $i from 1 through length($display) {
+        .display-sm-#{nth($display,$i)} {
+            display: #{nth($display, $i)};
+        }
+    }
 }
 @include breakpoint(1024px) {
     @for $i from 1 through 12 {
@@ -289,6 +305,11 @@ $line: 1, 1.125, 1.25, 1.5, 1.75, 2;
     @for $i from 1 through length($line) {
         .line-height-md-#{nth($line, $i) * 1000} {
             line-height: #{nth($line, $i)};
+        }
+    }
+    @for $i from 1 through length($display) {
+        .display-md-#{nth($display,$i)} {
+            display: #{nth($display, $i)};
         }
     }
 }
@@ -356,6 +377,11 @@ $line: 1, 1.125, 1.25, 1.5, 1.75, 2;
             line-height: #{nth($line, $i)};
         }
     }
+    @for $i from 1 through length($display) {
+        .display-lg-#{nth($display,$i)} {
+            display: #{nth($display, $i)};
+        }
+    }
 }
 @include breakpoint(1630px) {
     @for $i from 1 through 12 {
@@ -419,6 +445,11 @@ $line: 1, 1.125, 1.25, 1.5, 1.75, 2;
     @for $i from 1 through length($line) {
         .line-height-xl-#{nth($line, $i) * 1000} {
             line-height: #{nth($line, $i)};
+        }
+    }
+    @for $i from 1 through length($display) {
+        .display-xl-#{nth($display,$i)} {
+            display: #{nth($display, $i)};
         }
     }
 }

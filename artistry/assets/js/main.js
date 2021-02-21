@@ -1,6 +1,7 @@
 $(function () {
 	var width = $(window).width(),
-		height = $(window).height();
+		height = $(window).height(),
+		headerHeight = $('header').outerHeight();
 	new WOW().init();
 	if (width < 1024) {
 		$(".hamburger").on("click", function () {
@@ -18,7 +19,7 @@ $(function () {
 			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 			if (target.length) {
 				$('html, body').animate({
-					scrollTop: (target.offset().top - (height / 10))
+					scrollTop: (target.offset().top - headerHeight + 1)
 				}, 1000);
 				return false;
 			}
@@ -29,6 +30,14 @@ $(function () {
 		$(this).parent().siblings('p').slideToggle(300);
 		$(this).parent().parent('.col-md-4').siblings('.col-md-4').children('.col-title').children('.force-more').removeClass('opened');
 		$(this).parent().parent('.col-md-4').siblings('.col-md-4').children('p').slideUp();
+	})
+	$('.accordion-more').click(function(){
+		$(this).toggleClass('opened')
+		$(this).parent().siblings('p').slideToggle(300);
+		$(this).parent().parent().siblings('.display-none').slideToggle(300);
+		$(this).parent('.title').parent().parent('.row').parent('.container').parent('.accordion-section').siblings('.accordion-section').children().children().children().children('.title').children('.accordion-more').removeClass('opened');
+		$(this).parent('.title').parent().parent('.row').parent('.container').parent('.accordion-section').siblings('.accordion-section').children().children().children().children('p').slideUp();
+		$(this).parent('.title').parent().parent('.row').parent('.container').parent('.accordion-section').siblings('.accordion-section').children().children().children('.display-none').slideUp();
 	})
 	$('.product-more').click(function(){
 		$(this).toggleClass('opened')
