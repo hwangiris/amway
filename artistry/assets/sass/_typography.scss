@@ -15,7 +15,6 @@ $colors: map-merge((
 $typo: $h1, $h2, $h3, $h4, $h5, $h6;
 $typo-m: $h1-m, $h2-m, $h3-m, $h4-m, $h5-m, $h6-m;
 $weight: 100, 300, 400, 500;
-$line: 1, 1.125, 1.25, 1.5, 1.75, 2;
 @for $i from 1 through length($typo) {
 	h#{$i}, .h#{$i} {
 		margin-top: 1em;
@@ -24,11 +23,6 @@ $line: 1, 1.125, 1.25, 1.5, 1.75, 2;
 		@include breakpoint(768px) {
 			font-size: #{nth($typo, $i)};
 		}
-	}
-}
-@for $i from 1 through length($line) {
-	.line-height-#{nth($line, $i) * 1000} {
-		line-height: #{nth($line, $i)};
 	}
 }
 @for $i from 1 through length($weight) {
