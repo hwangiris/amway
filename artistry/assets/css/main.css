@@ -5433,6 +5433,8 @@ section .row-grid {
 @media (max-width: 1023px) {
   section .row-grid .grid-text {
     display: none;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
     grid-column-start: 1;
     grid-column-end: 3;
   }
