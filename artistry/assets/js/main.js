@@ -3,8 +3,9 @@ $(function () {
 		height = $(window).height(),
 		headerHeight = $('header').outerHeight();
 	new WOW().init();
-	var isIE11 = !!navigator.userAgent.match(/Trident.*rv\:11\./);
-	if (isIE11) {
+	var isIE = isIE = (navigator.userAgent.indexOf("MSIE") != -1),
+		isIE11 = !!navigator.userAgent.match(/Trident.*rv\:11\./);
+	if (isIE || isIE11) {
 		$('.row-grid').addClass('row-ie');
 	}
 	if (width < 1024) {
