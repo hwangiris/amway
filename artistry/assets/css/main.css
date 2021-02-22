@@ -5454,11 +5454,8 @@ section .row-grid .grid-right img {
 section .row-grid.row-ie {
   display: flex;
 }
-section .row-grid.row-ie .grid-left {
-  width: 57.142857%;
-}
-section .row-grid.row-ie .grid-right {
-  width: 42.857143%;
+section .row-grid.row-ie .grid-left, section .row-grid.row-ie .grid-right {
+  width: 50%;
 }
 section .title {
   display: flex;

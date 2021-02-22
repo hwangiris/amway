@@ -113,11 +113,8 @@ section {
         }
         &.row-ie {
             display: flex;
-            .grid-left {
-                width: 57.142857%;
-            }
-            .grid-right {
-                width: 42.857143%;
+            .grid-left, .grid-right {
+                width: 50%;
             }
         }
     }
