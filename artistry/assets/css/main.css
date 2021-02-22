@@ -5711,7 +5711,7 @@ section .product-item {
 }
 @media (min-width: 1024px) {
   section .product-item {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 @media (max-width: 1023px) {
@@ -5775,9 +5775,8 @@ section .product-item .product-body {
 @media (min-width: 1024px) {
   section .product-item .product-body {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-between;
-    height: 100%;
   }
 }
 section .product-item .product-center > .h5 {
