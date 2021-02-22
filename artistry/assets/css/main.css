@@ -5451,8 +5451,11 @@ section .row-grid .grid-right {
 }
 @media (min-width: 1024px) {
   section .row-grid .grid-right {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
     grid-row-start: 1;
     grid-row-end: 3;
+    -ms-grid-column: 2;
     grid-column: 2;
   }
 }
