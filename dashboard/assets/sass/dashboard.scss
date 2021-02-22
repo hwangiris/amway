@@ -158,9 +158,13 @@ header {
                         color: $purple;
                         border-bottom-color: $purple;
                     }
+                    &.non-renewed {
+                        color: $light-blue;
+                        border-bottom-color: $light-blue;
+                    }
                     &.stopped {
-                        color: $orangeRed;
-                        border-bottom-color: $orangeRed;
+                        color: $orange-red;
+                        border-bottom-color: $orange-red;
                     }
                     &.potential {
                         color: $dark-orange;
@@ -354,7 +358,7 @@ footer {
         }
     }
     @include breakpoint(1024px) {
-        width: 320px;
+        width: 370px;
         padding: 0;
         &.mobile {
             display: none;
@@ -577,8 +581,11 @@ footer {
             &.cancel {
                 border-left-color: $purple;
             }
+            &.non-renewed {
+                border-left-color: $light-blue;
+            }
             &.stopped {
-                border-left-color: $orangeRed;
+                border-left-color: $orange-red;
             }
             .item-group-name {
                 width: 260px;
@@ -613,8 +620,11 @@ footer {
             &.cancel {
                 border-left-color: $purple;
             }
+            &.non-renewed {
+                border-left-color: $light-blue;
+            }
             &.stopped {
-                border-left-color: $orangeRed;
+                border-left-color: $orange-red;
             }
         }
         @include breakpoint(max-width 413px) {
@@ -815,10 +825,16 @@ footer {
                     background-color: $purple;
                 }
             }
-            &.stopped {
-                color: $orangeRed;
+            &.non-renewed {
+                color: $light-blue;
                 &::after {
-                    background-color: $orangeRed;
+                    background-color: $light-blue;
+                }
+            }
+            &.stopped {
+                color: $orange-red;
+                &::after {
+                    background-color: $orange-red;
                 }
             }
         }
@@ -906,7 +922,6 @@ footer {
         ol {
             font-size: 1.125rem;
             border-top: 1px solid $gray-100;
-            border-bottom: 1px solid $gray-100;
         }
         label {
             @include transition(color 0.2s);
