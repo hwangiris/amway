@@ -99,9 +99,6 @@ nav {
         li {
             @media screen and (max-width: 1023px) {
                 text-align: center;
-                &:first-child {
-                    display: none;
-                }
             }
             @media screen and (min-width: 1024px) {
                 display: inline-block;
@@ -137,9 +134,7 @@ nav {
             }
             + li {
                 @media screen and (max-width: 1023px) {
-                    + li {
-                        border-top: 1px solid rgba($gray, 0.15);
-                    }
+                    border-top: 1px solid rgba($gray, 0.15);
                 }
                 @media screen and (min-width: 1024px) {
                     margin-left: 30px;

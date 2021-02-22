@@ -5236,9 +5236,6 @@ nav ul {
   nav ul li {
     text-align: center;
   }
-  nav ul li:first-child {
-    display: none;
-  }
 }
 @media screen and (min-width: 1024px) {
   nav ul li {
@@ -5282,7 +5279,7 @@ nav ul li a:hover::before {
   transition: all 0.3s;
 }
 @media screen and (max-width: 1023px) {
-  nav ul li + li + li {
+  nav ul li + li {
     border-top: 1px solid rgba(112, 112, 112, 0.15);
   }
 }
@@ -5462,6 +5459,7 @@ section .row-grid.row-ie .grid-right {
 }
 section .title {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 section .title > svg {
@@ -5469,13 +5467,18 @@ section .title > svg {
 }
 @media (max-width: 1023px) {
   section .title > svg {
-    width: 2rem;
-    height: 2rem;
+    width: 1.75rem;
+    height: 1.75rem;
   }
 }
 section .title > span {
   position: relative;
   display: inline-block;
+}
+@media (max-width: 1023px) {
+  section .title > span {
+    width: calc(100% - 1.75rem - 10px);
+  }
 }
 section .title > span .highlight-bg {
   display: inline-block;
@@ -5813,8 +5816,8 @@ section.trailer p > span > span {
   display: inline-block;
 }
 @media screen and (max-width: 1023px) {
-  section#phyto {
-    display: none;
+  section#phyto .h3 {
+    font-size: 1.75rem;
   }
 }
 @media screen and (max-width: 1023px) {

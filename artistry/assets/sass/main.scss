@@ -120,17 +120,21 @@ section {
     }
     .title {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         > svg {
             display: block;
             @include breakpoint(max-width 1023px) {
-                width: 2rem;
-                height: 2rem;
+                width: 1.75rem;
+                height: 1.75rem;
             }
         }
         > span {
             position: relative;
             display: inline-block;
+            @include breakpoint(max-width 1023px) {
+                width: calc(100% - 1.75rem - 10px);
+            }    
             .highlight-bg {
                 display: inline-block;
                 background-repeat: no-repeat;
@@ -415,7 +419,9 @@ section {
     }
     &#phyto {
         @media screen and (max-width: 1023px) {
-            display: none;
+            .h3 {
+                font-size: $h4;
+            }
         }
     } 
     &#force {
