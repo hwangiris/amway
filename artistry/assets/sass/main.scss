@@ -76,6 +76,10 @@ section {
                 flex-direction: row-reverse;
             }
         }
+        > .container {
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
     .row-grid {
         display: grid;
