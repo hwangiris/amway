@@ -5418,12 +5418,15 @@ section .row.align-center {
   }
 }
 section .row-grid {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 4fr 3fr;
   grid-template-columns: 4fr 3fr;
 }
 @media (min-width: 1024px) {
   section .row-grid {
     grid-gap: 0 20px;
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -5521,8 +5524,10 @@ section .title.title-blue > span .highlight-bg {
 }
 @media (max-width: 1023px) {
   section .col-title {
+    display: -ms-grid;
     display: grid;
     grid-gap: 0 20px;
+    -ms-grid-columns: 40px auto 1.875rem;
     grid-template-columns: 40px auto 1.875rem;
     align-items: start;
   }

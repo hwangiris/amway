@@ -78,10 +78,13 @@ section {
         }
     }
     .row-grid {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: 4fr 3fr;
         grid-template-columns: 4fr 3fr;
         @include breakpoint(1024px) {
             grid-gap: 0 20px;
+            -ms-grid-columns: 1fr 1fr;
             grid-template-columns: 1fr 1fr;
         }
         .grid-text {
@@ -179,8 +182,10 @@ section {
     }
     .col-title {
         @include breakpoint(max-width 1023px) {
+            display:-ms-grid;
             display: grid;
             grid-gap: 0 20px;
+            -ms-grid-columns: 40px auto 1.875rem;
             grid-template-columns: 40px auto 1.875rem;
             align-items: start;
             + p {
