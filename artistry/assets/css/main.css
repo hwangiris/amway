@@ -5712,11 +5712,13 @@ section .product-item {
 @media (min-width: 1024px) {
   section .product-item {
     flex-wrap: wrap;
+    align-content: flex-start;
   }
 }
 @media (max-width: 1023px) {
   section .product-item {
     align-items: flex-start;
+    padding-bottom: 0 !important;
   }
 }
 @media (min-width: 1024px) {
@@ -5769,14 +5771,23 @@ section .product-item .product-title .label {
     display: none;
   }
 }
-section .product-item .product-body {
-  position: relative;
-}
 @media (min-width: 1024px) {
   section .product-item .product-body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+}
+section .product-item .product-body > * {
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  section .product-item .product-body .product-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    width: auto;
   }
 }
 section .product-item .product-center > .h5 {

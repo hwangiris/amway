@@ -331,9 +331,11 @@ section {
         display: flex;
         @include breakpoint(1024px) {
             flex-wrap: wrap;
+            align-content: flex-start;
         }
         @include breakpoint(max-width 1023px) {
             align-items: flex-start;
+            padding-bottom: 0 !important;
         }
         &.border-1 {
             @include breakpoint(1024px) {
@@ -376,12 +378,23 @@ section {
             }
         }
         .product-body {
-            position: relative;
             @include breakpoint(1024px) {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
                 // height: 100%;
+            }
+            > * {
+                width: 100%;
+            }
+            .product-bottom {
+                @include breakpoint(1024px) {
+                    position: absolute;
+                    bottom: 0;
+                    left: 20px;
+                    right: 20px;
+                    width: auto;
+                }
             }
         }
         .product-center > .h5 {

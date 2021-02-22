@@ -1,7 +1,8 @@
 $(function () {
 	var width = $(window).width(),
 		height = $(window).height(),
-		headerHeight = $('header').outerHeight();
+		headerHeight = $('header').outerHeight(),
+		productBottomHeight = $('.product-bottom').outerHeight();
 	new WOW().init();
 	var isIE = isIE = (navigator.userAgent.indexOf("MSIE") != -1),
 		isIE11 = !!navigator.userAgent.match(/Trident.*rv\:11\./);
@@ -31,6 +32,9 @@ $(function () {
 			}
 		}
 	});
+	$('.product-item').each(function(){
+		$(this).css('padding-bottom', productBottomHeight);
+	})
 	$('.force-more').click(function(){
 		$(this).toggleClass('opened')
 		$(this).parent().siblings('p').slideToggle(300);
