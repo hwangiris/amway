@@ -5418,25 +5418,18 @@ section .row.align-center {
   }
 }
 section .row-grid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 4fr 3fr;
   grid-template-columns: 4fr 3fr;
 }
 @media (min-width: 1024px) {
   section .row-grid {
     grid-gap: 0 20px;
-    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
 @media (max-width: 1023px) {
   section .row-grid .grid-text {
     display: none;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-column-start: 1;
-    grid-column-end: 3;
   }
 }
 @media (min-width: 1024px) {
@@ -5449,20 +5442,19 @@ section .row-grid {
 section .row-grid .grid-right {
   position: relative;
 }
-@media (min-width: 1024px) {
-  section .row-grid .grid-right {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-    -ms-grid-column: 2;
-    grid-column: 2;
-  }
-}
 section .row-grid .grid-right img {
   position: absolute;
   left: 0;
   bottom: 0;
+}
+section .row-grid.row-ie {
+  display: flex;
+}
+section .row-grid.row-ie .grid-left {
+  width: 57.142857%;
+}
+section .row-grid.row-ie .grid-right {
+  width: 42.857143%;
 }
 section .title {
   display: flex;
@@ -5529,10 +5521,8 @@ section .title.title-blue > span .highlight-bg {
 }
 @media (max-width: 1023px) {
   section .col-title {
-    display: -ms-grid;
     display: grid;
     grid-gap: 0 20px;
-    -ms-grid-columns: 40px auto 1.875rem;
     grid-template-columns: 40px auto 1.875rem;
     align-items: start;
   }

@@ -3,6 +3,10 @@ $(function () {
 		height = $(window).height(),
 		headerHeight = $('header').outerHeight();
 	new WOW().init();
+	var isIE11 = !!navigator.userAgent.match(/Trident.*rv\:11\./);
+	if (isIE11) {
+		$('.row-grid').addClass('row-ie');
+	}
 	if (width < 1024) {
 		$(".hamburger").on("click", function () {
 			$(this).toggleClass("active");
