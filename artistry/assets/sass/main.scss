@@ -39,6 +39,9 @@ section {
         @media screen and (orientation: portrait) {
             background-image: url('../images/opening-bg-m@2x.png');
         }
+        &.opening-ie {
+            overflow-x: hidden;
+        }
         .container {
             position: absolute;
             top: 0;

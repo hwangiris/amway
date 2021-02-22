@@ -5371,6 +5371,9 @@ section.opening {
     background-image: url("../images/opening-bg-m@2x.png");
   }
 }
+section.opening.opening-ie {
+  overflow-x: hidden;
+}
 section.opening .container {
   position: absolute;
   top: 0;

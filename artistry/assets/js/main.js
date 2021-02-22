@@ -7,6 +7,7 @@ $(function () {
 		isIE11 = !!navigator.userAgent.match(/Trident.*rv\:11\./);
 	if (isIE || isIE11) {
 		$('.row-grid').addClass('row-ie');
+		$('.opening').addClass('opening-ie');
 	}
 	if (width < 1024) {
 		$(".hamburger").on("click", function () {
