@@ -1130,7 +1130,7 @@ header .user-name div { padding-top: 2px; }
 .blank.opened { z-index: 5; }
 
 form.login-form label { display: block; }
-form.login-form label input { display: block; width: 100%; padding: 15px 15px 15px 55px; border: solid #898989; border-width: 0 0 1px; -moz-background-size: 25px; -o-background-size: 25px; -webkit-background-size: 25px; background-size: 25px; background-position: 15px center; background-repeat: no-repeat; outline: 0; }
+form.login-form label input { display: block; width: 100%; padding: 15px 15px 15px 55px; border: solid #898989; border-width: 0 0 1px; -moz-background-size: 25px; -o-background-size: 25px; -webkit-background-size: 25px; background-size: 25px; background-position: 15px center; background-repeat: no-repeat; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; outline: 0; }
 form.login-form label.userid input { background-image: url("../images/id.svg"); }
 form.login-form label.password input { background-image: url("../images/lock.svg"); }
 
