@@ -1,0 +1,50 @@
+@import "_mixin";
+@import "_variable";
+@import "_common";
+@import "_container";
+@import "_typography";
+@import "_button";
+@import "_header";
+@import "_form";
+@import "_modal";
+
+.login-page, .success-page {
+    display: flex;
+    align-items: center;
+}
+
+.eq {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.75rem;
+}
+
+.border-bottom-1 {
+    border-bottom: 1px solid $blue;
+}
+
+.order-list {
+    .order-item {
+        .display-grid {
+            grid-template-columns: auto auto;
+            align-items: center;
+        }
+        .order-head {
+            border: 1px solid $gray-bg;
+            @include border-radius(0.5em 0.5em 0 0);
+        }
+        .order-body {
+            border: 1px solid $gray-bg;
+            @include border-radius(0 0 0.5em 0.5em);
+            .order-detail {
+                grid-template-columns: 60px auto;
+                + .order-detail {
+                    border-top: 1px solid $gray-bg;
+                }
+                .detail-title {
+                    grid-column: 1 / span 2;
+                }
+            }
+        }
+    }
+}

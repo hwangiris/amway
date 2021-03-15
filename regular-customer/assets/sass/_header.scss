@@ -1,0 +1,35 @@
+header {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: $white;
+    background-color: $blue;
+    z-index: 5;
+    .display-flex {
+        align-items: center;
+        justify-content: space-between;
+    }
+    .user-name {
+        > * {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        img {
+            width: 1.5rem;
+        }
+        div {
+            padding-top: 2px;
+        }
+    }
+}
+
+.blank {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    &.opened {
+        z-index: 5;
+    }
+}

@@ -1,0 +1,60 @@
+button {
+    border: 0;
+    background-color: transparent;
+    @include appearance(none);
+}
+
+a.btn, button.btn {
+    display: inline-block;
+    min-width: 150px;
+    padding: 10.5px 20px;
+    font-size: 1rem;
+    text-align: center;
+    border: 1px solid;
+    outline: 0;
+    &.btn-gray {
+        color: $white;
+        border-color: $gray;
+        background-color: $gray;
+        &:hover {
+            border-color: darken($gray, 10%);
+            background-color: darken($gray, 10%);
+        }
+        &.btn-outlined {
+            color: $gray;
+            background-color: transparent;
+            &:hover {
+                color: darken($gray, 10%);
+                border-color: darken($gray, 10%);
+            }
+        }
+    }
+    &.btn-blue {
+        color: $white;
+        border-color: $blue;
+        background-color: $blue;
+        &:hover {
+            color: $white;
+            border-color: darken($blue, 10%);
+            background-color: darken($blue, 10%);
+        }
+    }
+}
+a.btn-text {
+    color: inherit;
+}
+
+.btn-group {
+    font-size: 0;
+    a.btn, button.btn {
+        min-width: auto;
+    }
+    &.btn-group-2 {
+        a.btn, button.btn {
+            width: calc((100% - 20px) / 2);
+            + * {
+                margin-left: 20px;
+            }
+        }
+    }
+}

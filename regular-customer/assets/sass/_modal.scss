@@ -1,0 +1,27 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($black, 0.5);
+    z-index: 1;
+    .container, .row {
+        height: 100%;
+        align-items: center;
+    }
+    .modal-body {
+        height: 310px;
+        overflow: scroll;
+    }
+    .modal-footer {
+        input#readNagree.highlight {
+            border: 1px solid $red;
+            outline: 0;
+            + label {
+                color: $red;
+            }
+        }
+    }
+}
