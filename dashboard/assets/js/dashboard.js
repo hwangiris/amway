@@ -12,6 +12,11 @@ $(function() {
         $(this).toggleClass('opened');
         $(this).parent().toggleClass('opened');
     })
+    $('.item-potential + .item-more').each(function() {
+        if ( $(this).siblings('.item-potential').children().length <= 2 ) {
+            $(this).remove();
+        }
+    })
     $('#top').click(function() {
         $('html,body').animate({ scrollTop: 0 });
         return false;
