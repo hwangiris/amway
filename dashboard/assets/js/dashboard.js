@@ -13,7 +13,9 @@ $(function() {
         $(this).parent().toggleClass('opened');
     })
     $('.item-potential + .item-more').each(function() {
-        if ( $(this).siblings('.item-potential').children().length <= 2 ) {
+        if ( (width >= 1024) && ($(this).siblings('.item-potential').children().length <= 3) ) {
+            $(this).remove();
+        } else if ( (width < 1024) && ($(this).siblings('.item-potential').children().length <= 2) ) {
             $(this).remove();
         }
     })

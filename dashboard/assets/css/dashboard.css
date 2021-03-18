@@ -465,14 +465,16 @@ footer span { display: block; }
 .item-section .item-group .item-status.stopped::after { background-color: #f17c7c; }
 @media (min-width: 1024px) { .item-section .item-potential { display: flex; flex-wrap: wrap; padding-right: 25%; margin-bottom: -20px; } }
 .item-section .item-potential .item-list { padding: 0 20px; border: solid transparent; border-width: 0 3px; border-left-color: #D8871E; }
-@media (min-width: 1024px) { .item-section .item-potential .item-list { margin-bottom: 20px; width: 33.3333%; } }
-@media (max-width: 1023px) { .item-section .item-potential .item-list + .item-list { margin-top: 20px; } }
-.item-section .item-potential .item-list + .item-list + .item-list { display: none; }
+@media (min-width: 1024px) { .item-section .item-potential .item-list { margin-bottom: 20px; width: 33.3333%; }
+  .item-section .item-potential .item-list + .item-list + .item-list + .item-list { display: none; } }
+@media (max-width: 1023px) { .item-section .item-potential .item-list + .item-list { margin-top: 20px; }
+  .item-section .item-potential .item-list + .item-list + .item-list { display: none; } }
 .item-section .item-potential .item-title { margin-bottom: 5px; color: #D8871E; }
 .item-section .item-potential .item-time { color: #4D4D4D; }
 .item-section .item-potential .item-time i.icon { margin-right: 10px; color: #808080; }
 .item-section .item-potential .item-potential-more > * { display: inline-block; vertical-align: middle; }
-.item-section.opened .item-potential .item-list + .item-list + .item-list { display: block; }
+@media (max-width: 1023px) { .item-section.opened .item-potential .item-list + .item-list + .item-list { display: block; } }
+@media (min-width: 1024px) { .item-section.opened .item-potential .item-list + .item-list + .item-list + .item-list { display: block; } }
 
 .popup { position: fixed; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; z-index: 10; }
 .popup .popup-bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: #4D4D4D; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25); opacity: 0.25; }

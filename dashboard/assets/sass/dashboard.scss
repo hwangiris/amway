@@ -885,14 +885,17 @@ footer {
             @include breakpoint(1024px) {
                 margin-bottom: 20px;
                 width: 33.3333%;
-            }    
+                + .item-list + .item-list + .item-list {
+                    display: none;
+                }
+            }
             @include breakpoint(max-width 1023px) {
                 +.item-list {
                     margin-top: 20px;
+                    + .item-list {
+                        display: none;
+                    }
                 }
-            }
-            + .item-list + .item-list {
-                display: none;
             }
         }
         .item-title {
@@ -914,8 +917,15 @@ footer {
         }
     }
     &.opened .item-potential {
-        .item-list + .item-list + .item-list {
-            display: block;
+        @include breakpoint(max-width 1023px) {
+            .item-list + .item-list + .item-list {
+                display: block;
+            }
+        }
+        @include breakpoint(1024px) {
+            .item-list + .item-list + .item-list + .item-list {
+                display: block;
+            }
         }
     }
 }
