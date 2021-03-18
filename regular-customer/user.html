@@ -21,12 +21,13 @@
             <div class="row">
                 <div class="col-12">
                     <div class="display-flex line-height-1000">
+                        <img class="icon-amway" src="assets/images/icon-amway.png" alt="">
                         <div class="user-name">
                             <img src="assets/images/user.svg" alt="">
                             <div class="h2 ml-5 my-0 font-weight-500">黃祖君</div>
-                        </div>
-                        <div class="user-number">
-                            會員編號 4254987
+                            <div class="user-number">
+                                會員編號 4254987
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -203,7 +204,7 @@
                     </div>
                     <div class="modal-footer px-10">
                         <input type="checkbox" id="readNagree" name="readNagree" value="Bike"><label class="ml-15" for="readNagree">我已閱讀並同意</label>
-                        <div class="display-none checkbox-alert color-red">請完整閱讀（請將畫面拉至最下方）並勾選同意</div>
+                        <div class="checkbox-alert color-dark">請完整閱讀（請將畫面拉至最下方）並勾選同意</div>
                         <div class="btn-group btn-group-2 mt-30">
                             <button id="modal-cancel" class="btn btn-gray btn-outlined">取消</button>
                             <button id="modal-agree" class="btn btn-gray btn-container">同意</button>
@@ -214,7 +215,6 @@
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script>
         $(function(){
             $('#tranaform').on('click', function(){
@@ -224,7 +224,7 @@
             $('#modal-cancel').on('click', function(){
                 $('body').removeClass('opened');
                 $('.modal').fadeOut();
-                $('.modal-footer .checkbox-alert').hide();
+                $('.modal-footer .checkbox-alert').removeClass('color-red').addClass('color-dark');
             })
             $('#modal-agree').on('click', function(){
                 if ( $('#readNagree').is(':checked') ) {
@@ -232,7 +232,14 @@
                     $('.modal').fadeOut();
                     window.location.href = 'success.html';
                 } else {
-                    $('.modal-footer .checkbox-alert').show();
+                    $('.modal-footer .checkbox-alert').removeClass('color-dark').addClass('color-red');
+                }
+            })
+            $('#readNagree').on('click', function(){
+                if ( $('#readNagree').is(':checked') ) {
+                    $('.modal-footer .checkbox-alert').removeClass('color-red').addClass('color-dark');
+                } else {
+                    $('.modal-footer .checkbox-alert').removeClass('color-dark').addClass('color-red');
                 }
             })
         })

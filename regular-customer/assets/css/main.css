@@ -1120,11 +1120,13 @@ a.btn-text { color: inherit; }
 .btn-group.btn-group-2 a.btn, .btn-group.btn-group-2 button.btn { width: calc((100% - 20px) / 2); }
 .btn-group.btn-group-2 a.btn + *, .btn-group.btn-group-2 button.btn + * { margin-left: 20px; }
 
-header { padding-top: 1.25rem; padding-bottom: 1.25rem; color: #fff; background-color: #214888; z-index: 5; }
+header { padding-top: 1rem; padding-bottom: 1rem; color: #fff; background-color: #214888; z-index: 5; }
 header .display-flex { align-items: center; justify-content: space-between; }
+header img { width: 2rem; }
 header .user-name > * { display: inline-block; vertical-align: middle; }
 header .user-name img { width: 1.5rem; }
 header .user-name div { padding-top: 2px; }
+header .user-number { margin-left: 10px; padding-left: 10px; border-left: 1px solid #fff; }
 
 .blank { position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: -1; }
 .blank.opened { z-index: 5; }
@@ -1136,7 +1138,8 @@ form.login-form label.password input { background-image: url("../images/lock.svg
 
 .modal { display: none; position: fixed; top: 0; bottom: 0; left: 0; right: 0; background-color: rgba(0, 0, 0, 0.5); z-index: 1; }
 .modal .container, .modal .row { height: 100%; align-items: center; }
-.modal .modal-body { height: 310px; overflow: scroll; }
+.modal .modal-body { height: 25vh; overflow: scroll; }
+@media screen and (min-height: 720px) { .modal .modal-body { height: 300px; } }
 .modal .modal-footer input#readNagree.highlight { border: 1px solid #db3559; outline: 0; }
 .modal .modal-footer input#readNagree.highlight + label { color: #db3559; }
 

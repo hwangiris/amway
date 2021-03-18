@@ -12,8 +12,11 @@
         align-items: center;
     }
     .modal-body {
-        height: 310px;
+        height: 25vh;
         overflow: scroll;
+        @media screen and (min-height: 720px) {
+            height: 300px;
+        }
     }
     .modal-footer {
         input#readNagree.highlight {
