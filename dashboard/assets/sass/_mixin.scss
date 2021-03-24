@@ -33,3 +33,11 @@
     padding: $padding;
     list-style: $style;
 }
+@mixin icon($size, $image) {
+    width: $size;
+    height: $size;
+    background-image: url($image);
+    background-position: center;
+    background-repeat: no-repeat;
+    @include background-size(contain);
+}
