@@ -1140,6 +1140,11 @@ form.login-form label.password input { background-image: url("../images/lock.svg
 .modal .container, .modal .row { height: 100%; align-items: center; }
 .modal .modal-body { height: 25vh; overflow: scroll; }
 @media screen and (min-height: 720px) { .modal .modal-body { height: 300px; } }
+.modal .modal-body ol { list-style: none; padding-left: 2.5em; }
+.modal .modal-body ol li { position: relative; }
+.modal .modal-body ol li::before { content: attr(data-list); display: inline-block; position: absolute; top: 0; right: calc(100% + 0.35em); }
+.modal .modal-body > ol { padding-left: 2em; }
+.modal .modal-body > ol > li::before { right: calc(100% + 0.6em); }
 .modal .modal-footer input#readNagree.highlight { border: 1px solid #db3559; outline: 0; }
 .modal .modal-footer input#readNagree.highlight + label { color: #db3559; }
 

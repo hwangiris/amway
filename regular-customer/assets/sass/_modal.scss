@@ -17,6 +17,27 @@
         @media screen and (min-height: 720px) {
             height: 300px;
         }
+        ol {
+            list-style: none;
+            padding-left: 2.5em;
+            li {
+                position: relative;
+                &::before {
+                    @include beforeafter(attr(data-list), inline-block);
+                    position: absolute;
+                    top: 0;
+                    right: calc(100% + 0.35em);
+                }
+            }
+        }
+        > ol {
+            padding-left: 2em;
+            > li {
+                &::before {
+                    right: calc(100% + 0.6em);
+                }
+            }
+        }
     }
     .modal-footer {
         input#readNagree.highlight {
