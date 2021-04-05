@@ -1,0 +1,33 @@
+$container: 1170px;
+
+//
+$h1: 2.25rem; //36px
+$h2: 2rem; //32px
+$h3: 1.875rem; //30px
+$h4: 1.125rem; //18px
+$h5: 1rem; //16px
+$h6: 0.875rem; //14px
+
+//
+$white: #fff !default;
+$gray: #7E8180 !default;
+$dark: #2B2D2C !default;
+$black: #000 !default;
+
+$blue: #3275B2;
+
+//
+$surface: $black;
+$primary: $blue !default;
+$background: $white !default;
+$text: $dark !default;
+
+//
+$facebook: #1877f2 !default;
+$line: #00c200 !default;
+$instagram: #dd2a7b !default;
+$weibo: #e6162d !default;
+$rss: #ff5700 !default;
+$twitter: #00acee !default;
+$whatapp: #4fce5d !default;
+$mail: $surface !default;

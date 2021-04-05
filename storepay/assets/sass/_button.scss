@@ -1,0 +1,23 @@
+a.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    outline: 0;
+    &.btn-green {
+        color: $green;
+        background-color: $lightgreen;
+        &:hover {
+            color: $white;
+            background-color: $green;
+        }
+    }
+    &.btn-blue {
+        color: $blue;
+        background-color: $lightblue;
+        &:hover {
+            color: $white;
+            background-color: $blue;
+        }
+    }
+}
