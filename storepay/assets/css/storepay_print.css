@@ -307,7 +307,7 @@ header h1 {
   font-size: 1rem;
   font-weight: 500;
 }
-header h1.desktop {
+header h1.mobile {
   display: none;
 }
 
@@ -346,11 +346,11 @@ section > .container > div::after {
 section > .container > div > .key {
   float: left;
   color: #7E8180;
-  width: 7em;
+  width: 8em;
 }
 section > .container > div > .value {
   float: right;
-  width: calc(100% - 8em);
+  width: calc(100% - 9em);
   text-align: right;
 }
 section > .container > div > .value span {
@@ -391,5 +391,3 @@ section > .container .barcode-list .barcode-item > div {
 footer {
   display: none;
 }
-
-/*# sourceMappingURL=storepay_print.css.map */

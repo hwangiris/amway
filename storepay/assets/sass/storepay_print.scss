@@ -70,7 +70,7 @@ header {
         margin-bottom: 0;
         font-size: $h5;
         font-weight: 500;
-        &.desktop {
+        &.mobile {
             display: none;
         }
     }
@@ -104,11 +104,11 @@ section {
             > .key {
                 float: left;
                 color: $gray;
-                width: 7em;
+                width: 8em;
             }
             > .value {
                 float: right;
-                width: calc(100% - 8em);
+                width: calc(100% - 9em);
                 text-align: right;
                 span {
                     color: $blue;

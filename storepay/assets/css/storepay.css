@@ -451,21 +451,21 @@ section > .container > div::after {
 section > .container > div > .key {
   float: left;
   color: #7E8180;
-  width: 7em;
+  width: 8em;
 }
 @media screen and (max-width: 374px) {
   section > .container > div > .key {
-    width: 5em;
+    width: 6em;
   }
 }
 section > .container > div > .value {
   float: right;
-  width: calc(100% - 8em);
+  width: calc(100% - 9em);
   text-align: right;
 }
 @media screen and (max-width: 374px) {
   section > .container > div > .value {
-    width: calc(100% - 6em);
+    width: calc(100% - 7em);
   }
 }
 section > .container > div > .value span {
@@ -527,5 +527,3 @@ section > .container .barcode-list .barcode-item > div {
   text-align: center;
   line-height: 1;
 }
-
-/*# sourceMappingURL=storepay.css.map */
