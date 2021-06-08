@@ -43,7 +43,7 @@
 
 @mixin btn-outlined($default, $hover) {
     display: inline-block;
-    padding: 0.25em 1em 0.35em;
+    padding: 0.3em 1em;
     color: $default;
     border: 2px solid $default;
     @include border-radius(10px);
@@ -54,12 +54,12 @@
     }
 }
 
-@mixin btn-blue2yellow() {
+@mixin btn-blue2yellow($default:$blue) {
     display: inline-block;
-    padding: 0.25em 1em 0.35em;
+    padding: 0.3em 1em;
     color: $white;
-    background-color: $blue;
-    border: 2px solid $blue;
+    background-color: $default;
+    border: 2px solid $default;
     @include border-radius(30px);
     &:hover,
     &.active {
@@ -70,7 +70,7 @@
 
 @mixin btn-yellow() {
     display: inline-block;
-    padding: 0.25em 1em 0.35em;
+    padding: 0.3em 1em;
     color: $white;
     background-color: $yellow;
     border: 2px solid $yellow;

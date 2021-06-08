@@ -1,10 +1,44 @@
 @import "_normalize";
 @import "bootstrap/functions";
 @import "bootstrap/variables";
-@import "bootstrap/mixins/breakpoints";
-@import "bootstrap/mixins/grid-framework";
-@import "bootstrap/mixins/grid";
+@import "bootstrap/mixins";
 @import "bootstrap/grid";
 // @import "bootstrap/utilities/display";
 @import "bootstrap/utilities/flex";
 @import "bootstrap/utilities/embed";
+@import "bootstrap/modal";
+
+.modal.show .modal-dialog {	
+  -webkit-transform: none;	
+  transform: none;	
+}	
+.modal-dialog-scrollable {	
+  display: -ms-flexbox;	
+  display: flex;	
+  max-height: calc(100% - 1rem);	
+}	
+.modal-dialog-scrollable .modal-content {	
+  max-height: calc(100vh - 1rem);	
+  overflow: hidden;	
+}	
+.modal-dialog-scrollable .modal-header,	
+.modal-dialog-scrollable .modal-footer {	
+  -ms-flex-negative: 0;	
+  flex-shrink: 0;	
+}	
+.modal-dialog-scrollable .modal-body {	
+  overflow-y: auto;	
+}
+.modal-dialog-centered.modal-dialog-scrollable {	
+  -ms-flex-direction: column;	
+  flex-direction: column;	
+  -ms-flex-pack: center;	
+  justify-content: center;	
+  height: 100%;	
+}	
+.modal-dialog-centered.modal-dialog-scrollable .modal-content {	
+  max-height: none;	
+}	
+.modal-dialog-centered.modal-dialog-scrollable::before {	
+  content: none;	
+}

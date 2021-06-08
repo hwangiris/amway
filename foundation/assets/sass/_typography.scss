@@ -8,5 +8,8 @@ $h-size: 32px,
     .h#{$i} {
         font-size: nth($h-size, $i);
         font-weight: 500;
+        span {
+            display: inline-block;
+        }
     }
 }

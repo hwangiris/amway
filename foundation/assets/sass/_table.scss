@@ -314,3 +314,67 @@
         }
     }
 }
+
+.modal-body table {
+    width: 100%;
+    tr {
+        th, td {
+            padding: 1.5rem 0.75rem;
+            @media (min-width: 1024px) {
+                padding: 1.875rem 1.5625rem;
+            }
+            &:first-child {
+                padding-left: 1.5rem;
+                text-align: center;
+                @media (min-width: 1024px) {
+                    padding-left: 3.125rem;
+                }
+            }
+            &:last-child {
+                padding-right: 1.5rem;
+                @media (min-width: 1024px) {
+                    padding-right: 3.125rem;
+                }
+            }
+        }
+    }
+    thead {
+        color: #fff;
+        background-color: $blue;
+    }
+    tbody tr {
+        &:nth-child(odd) {
+            background-color: rgba($blue, 0.1);
+        }
+        &:nth-child(5) {
+            border-bottom: 4px solid $blue;
+        }
+        td {
+            &:nth-child(1), &:nth-child(2) {
+                color: $blue;
+                font-weight: 500;
+            }
+            &:nth-child(1) {
+                width: 90px;
+                @media (min-width: 414px) {
+                    width: 90px;
+                }
+                @media (min-width: 1024px) {
+                    width: 130px;
+                }
+            }
+            &:nth-child(2) {
+                width: 110px;
+                @media (min-width: 414px) {
+                    width: 150px;
+                }
+                @media (min-width: 1024px) {
+                    width: 380px;
+                }
+            }
+            &:nth-child(3) {
+                color: $dark;
+            }
+        }
+    }
+}

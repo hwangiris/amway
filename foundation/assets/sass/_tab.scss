@@ -36,6 +36,9 @@
         padding-bottom: 2px;
         font-size: 0;
         overflow: hidden;
+        @include breakpoint(max-width 478px) {
+            display: flex;
+        }
         &::after {
             @include beforeafter('', block);
             position: absolute;
@@ -76,6 +79,18 @@
                 border-width: 2px 2px 0;
                 @include border-radius(10px 10px 0 0);
                 box-shadow: 12px 12px 12px rgba($black, 0.05);
+                @include breakpoint(max-width 478px) {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    span {
+                        display: block;
+                        line-height: 1.15;
+                    }
+                }
                 @include breakpoint(375px) {
                     padding: 10px;
                     @include border-radius(20px 20px 0 0);

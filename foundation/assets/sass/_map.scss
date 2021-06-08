@@ -1,0 +1,529 @@
+.map-group {
+	position: relative;
+	display: table;
+	margin: auto;
+	img {
+		display: block;
+		margin: auto;
+		&.map-desktop {
+			width: 100%;
+			max-width: 1030px;
+			@include breakpoint(max-width 1023px) {
+				display: none;
+			}
+		}
+		&.map-pad {
+			width: 100%;
+			@include breakpoint(max-width 767px) {
+				display: none;
+			}
+			@include breakpoint(1024px) {
+				display: none;
+			}
+		}
+		&.map-mobile {
+			width: 100%;
+			@include breakpoint(768px) {
+				display: none;
+			}
+		}
+	}
+	a.map-link {
+		position: absolute;
+		display: block;
+		@include breakpoint(1024px) {
+			height: 2rem;
+			&.ntc1 {
+				top: 1.1%;
+				left: 21.1%;
+				width: 30.1%;
+			}
+			&.ntc2 {
+				top: 4.1%;
+				left: 41.65%;
+				width: 9.5%;
+			}
+			&.ntc3 {
+				top: 7.1%;
+				left: 37.2%;
+				width: 14%;
+			}
+			&.taoyuan {
+				top: 13.6%;
+				left: 23.6%;
+				width: 17%;
+			}
+			&.hsinchu {
+				top: 17%;
+				left: 23.6%;
+				width: 17%;
+			}
+			&.maoli {
+				top: 24.7%;
+				left: 17.5%;
+				width: 17%;
+			}
+			&.taichung {
+				top: 34.3%;
+				left: 9%;
+				width: 17%;
+			}
+			&.changhua {
+				top: 40.3%;
+				left: 9%;
+				width: 17%;
+			}
+			&.nantou {
+				top: 37.3%;
+				left: 2.2%;
+				width: 23.7%;
+			}
+			&.yunlin {
+				top: 45%;
+				left: 6.8%;
+				width: 17%;
+			}
+			&.chiayi {
+				top: 49.95%;
+				left: 0%;
+				width: 23.7%;
+			}
+			&.chiayi2 {
+				top: 53.4%;
+				left: 7.6%;
+				width: 16.5%;
+			}
+			&.tainan {
+				top: 60.25%;
+				left: 5.7%;
+				width: 17%;
+			}
+			&.kaohsiung {
+				top: 67.25%;
+				left: 3.8%;
+				width: 19%;
+			}
+			&.pingtung {
+				top: 72.1%;
+				left: 4.6%;
+				width: 21.7%;
+			}
+			&.pingtung2 {
+				top: 75.4%;
+				left: 16.6%;
+				width: 9.5%;
+			}
+			&.pingtung3 {
+				top: 78.6%;
+				left: 12.1%;
+				width: 14%;
+			}
+			&.yilan {
+				top: 22.2%;
+				left: 82%;
+				width: 17%;
+			}
+			&.hualien {
+				top: 29.9%;
+				left: 75.9%;
+				width: 19%;
+			}
+			&.hualien2 {
+				top: 33.1%;
+				left: 83.5%;
+				width: 16%;
+			}
+			&.hualien3 {
+				top: 36.4%;
+				left: 83.5%;
+				width: 16%;
+			}
+			&.taitung {
+				top: 59.4%;
+				left: 73.3%;
+				width: 17%;
+			}
+			&.taitung2 {
+				top: 62.4%;
+				left: 80.8%;
+				width: 9.5%;
+			}
+			&.taitung3 {
+				top: 65.4%;
+				left: 80.8%;
+				width: 13.8%;
+			}
+			&.taitung4 {
+				top: 68.4%;
+				left: 80.8%;
+				width: 13.8%;
+			}
+			&.kinmen {
+				top: 14.6%;
+				left: 0.9%;
+				width: 17%;
+			}
+		}
+		@media screen and (min-width: 768px) and (max-width: 1023px) {
+			height: 2.8%;
+			&.ntc1 {
+				top: 1.2%;
+				left: 28.3%;
+				width: 32.7%;
+			}
+			&.ntc2 {
+				top: 5%;
+				left: 50.1%;
+				width: 10.5%;
+			}
+			&.ntc3 {
+				top: 9.3%;
+				left: 36.4%;
+				width: 16%;
+			}
+			&.taoyuan {
+				top: 15.2%;
+				left: 30.3%;
+				width: 18.7%;
+			}
+			&.hsinchu {
+				top: 18.4%;
+				left: 27.3%;
+				width: 18.7%;
+			}
+			&.maoli {
+				top: 25.9%;
+				left: 20.8%;
+				width: 18.7%;
+			}
+			&.taichung {
+				top: 31.5%;
+				left: 20.8%;
+				width: 18.7%;
+			}
+			&.changhua {
+				top: 41.3%;
+				left: 9.8%;
+				width: 18.7%;
+			}
+			&.nantou {
+				top: 36.9%;
+				left: 9.8%;
+				width: 26.2%;
+			}
+			&.yunlin {
+				top: 45.5%;
+				left: 9.8%;
+				width: 18.7%;
+			}
+			&.chiayi {
+				top: 52.1%;
+				left: 1%;
+				width: 26.3%;
+			}
+			&.chiayi2 {
+				top: 56.6%;
+				left: 8.8%;
+				width: 18.5%;
+			}
+			&.tainan {
+				top: 61.25%;
+				left: 8.9%;
+				width: 18.7%;
+			}
+			&.kaohsiung {
+				top: 66.8%;
+				left: 6.1%;
+				width: 20.7%;
+			}
+			&.pingtung {
+				top: 76.8%;
+				left: 9.5%;
+				width: 24%;
+			}
+			&.pingtung2 {
+				top: 81.2%;
+				left: 22.7%;
+				width: 10.5%;
+			}
+			&.pingtung3 {
+				top: 85.75%;
+				left: 17.5%;
+				width: 16%;
+			}
+			&.yilan {
+				top: 21%;
+				left: 86.3%;
+				width: 10.5%;
+				height: 5.3%;
+			}
+			&.hualien {
+				top: 28.4%;
+				left: 83.7%;
+				width: 13%;
+				height: 5.3%;
+			}
+			&.hualien2 {
+				top: 35.8%;
+				left: 78.3%;
+				width: 19%;
+			}
+			&.hualien3 {
+				top: 41.2%;
+				left: 78.3%;
+				width: 19%;
+			}
+			&.taitung {
+				top: 56.9%;
+				left: 76.8%;
+				width: 10.5%;
+				height: 5.3%;
+			}
+			&.taitung2 {
+				top: 63.4%;
+				left: 76.8%;
+				width: 10.5%;
+			}
+			&.taitung3 {
+				top: 69.7%;
+				left: 72.2%;
+				width: 15.8%;
+			}
+			&.taitung4 {
+				top: 73.6%;
+				left: 72.2%;
+				width: 15.8%;
+			}
+			&.kinmen {
+				top: 11.5%;
+				left: 1%;
+				width: 10.5%;
+				height: 5.3%;
+			}
+		}
+		@include breakpoint(max-width 767px) {
+			height: 3%;
+			&.ntc1 {
+				top: 0.3%;
+				left: 29%;
+				width: 37%;
+			}
+			&.ntc2 {
+				top: 3.9%;
+				left: 45.5%;
+				width: 12.5%;
+			}
+			&.ntc3 {
+				top: 8.5%;
+				left: 28.4%;
+				width: 19%;
+			}
+			&.taoyuan {
+				top: 14.4%;
+				left: 21%;
+				width: 22.3%;
+			}
+			&.hsinchu {
+				top: 17.8%;
+				left: 17.4%;
+				width: 22.3%;
+			}
+			&.maoli {
+				top: 25.25%;
+				left: 10%;
+				width: 22.3%;
+			}
+			&.taichung {
+				top: 30.9%;
+				left: 10%;
+				width: 22.3%;
+			}
+			&.changhua {
+				top: 40.65%;
+				left: 0.4%;
+				width: 22.3%;
+			}
+			&.nantou {
+				top: 36.2%;
+				left: 0.2%;
+				width: 31%;
+			}
+			&.yunlin {
+				top: 45.5%;
+				left: 0%;
+				width: 21.8%;
+			}
+			&.chiayi {
+				top: 50.4%;
+				left: 0.1%;
+				width: 21.3%;
+				height: 5.5%;
+			}
+			&.chiayi2 {
+				top: 56.6%;
+				left: 0;
+				width: 21.6%;
+			}
+			&.tainan {
+				top: 60.7%;
+				left: 0.1%;
+				width: 22.3%;
+			}
+			&.kaohsiung {
+				top: 66.6%;
+				left: 2.2%;
+				width: 16.2%;
+				height: 5.5%;
+			}
+			&.pingtung {
+				top: 74%;
+				left: 5.5%;
+				width: 19%;
+				height: 5.5%;
+			}
+			&.pingtung2 {
+				top: 81.1%;
+				left: 12%;
+				width: 12.5%;
+			}
+			&.pingtung3 {
+				top: 86%;
+				left: 6%;
+				width: 19%;
+			}
+			&.yilan {
+				top: 20.3%;
+				left: 87%;
+				width: 12.5%;
+				height: 5.5%;
+			}
+			&.hualien {
+				top: 27.8%;
+				left: 78.5%;
+				width: 15.2%;
+				height: 5.5%;
+			}
+			&.hualien2 {
+				top: 35.3%;
+				left: 78.3%;
+				width: 22%;
+			}
+			&.hualien3 {
+				top: 40.8%;
+				left: 78.3%;
+				width: 22%;
+			}
+			&.taitung {
+				top: 56.6%;
+				left: 76.1%;
+				width: 12.5%;
+				height: 5.5%;
+			}
+			&.taitung2 {
+				top: 63%;
+				left: 76.1%;
+				width: 12.5%;
+			}
+			&.taitung3 {
+				top: 69.6%;
+				left: 69.5%;
+				width: 18.8%;
+			}
+			&.taitung4 {
+				top: 73.6%;
+				left: 69.5%;
+				width: 18.8%;
+			}
+			&.kinmen {
+				top: 5.7%;
+				left: 0.5%;
+				width: 12.5%;
+				height: 5.5%;
+			}
+		}
+	}
+}
+
+.map-item {
+	padding: 20px;
+	font-size: 0;
+	background-color: $white;
+	border: 2px solid $blue;
+	box-shadow: 20px 20px 20px rgba($black, 0.05);
+	@include border-radius(20px);
+	@include breakpoint(1200px) {
+		padding: 30px;
+		border-width: 4px;
+	}
+	.map-img {
+		display: inline-block;
+		vertical-align: text-top;
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding-top: 68.518519%;
+		@include border-radius(20px);
+		overflow: hidden;
+		@include breakpoint(1200px) {
+			width: 540px;
+			padding-top: calc(540px * 0.68518519);
+		}
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			@include translate(-50%, -50%);
+		}
+	}
+	.map-body {
+		position: relative;
+		display: inline-block;
+		vertical-align: text-top;
+		width: 100%;
+		height: 68.518519%;
+		@include breakpoint(max-width 1199px) {
+			margin-bottom: 2em;
+		}
+		@include breakpoint(1200px) {
+			width: calc(100% - 540px);
+			height: calc(540px * 0.68518519);
+			padding-right: 40px;
+		}
+	}
+	.map-since {
+		margin-top: 5px;
+		margin-bottom: 10px;
+		@include breakpoint(1200px) {
+			margin-top: 10px;
+			margin-bottom: 20px;
+		}
+	}
+	.map-phrase {
+		color: $text;
+	}
+	.map-link {
+		left: 0;
+		bottom: 0;
+		@include breakpoint(1200px) {
+			position: absolute;
+		}
+		@include breakpoint(max-width 1199px) {
+			margin-top: 1em;
+		}
+		a {
+			display: block;
+			color: $blue;
+			font-size: 0.875em;
+			word-break: break-word;
+			i.icon {
+				color: $blue-dark;
+			}
+			&:hover {
+				color: $blue-dark;
+			}
+		}
+	}
+}

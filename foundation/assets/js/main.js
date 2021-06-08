@@ -117,6 +117,22 @@ $(document).ready(function() {
         prevArrow: "<button type='button' class='slick-navi slick-prev'><i class='icon icon-chevron-left'></i></button>",
         nextArrow: "<button type='button' class='slick-navi slick-next'><i class='icon icon-chevron-right'></i></button>"
     });
+
+    $('#dream_button').click(function(){
+        $('#dream_modal').addClass('show').fadeIn();
+    });
+    $('#dream_modal, #dream_modal .close').click(function(){
+        $('#dream_modal').removeClass('show').fadeOut();
+    });
+    $('#dream_modal .modal-content').click(function(event){
+        event.stopPropagation();
+    });
+    $('.project-year-list .year-number').each(function(){
+        if ( $(this).children('button').length > 0 ) {
+            $(this).addClass('has-button');
+        }
+    });
+
     $(window).load(function() {
         var opHeight = $('.opening').outerHeight();
         $('.opening-bg').height(opHeight);

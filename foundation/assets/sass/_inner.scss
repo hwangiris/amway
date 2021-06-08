@@ -86,584 +86,7 @@
     }
 }
 
-.map-group {
-    position: relative;
-    display: table;
-    margin: auto;
-    img {
-        display: block;
-        margin: auto;
-        &.map-desktop {
-            width: 100%;
-            max-width: 1030px;
-            @include breakpoint(max-width 1023px) {
-                display: none;
-            }
-        }
-        &.map-pad {
-            width: 100%;
-            @include breakpoint(max-width 767px) {
-                display: none;
-            }
-            @include breakpoint(1024px) {
-                display: none;
-            }
-        }
-        &.map-mobile {
-            width: 100%;
-            @include breakpoint(768px) {
-                display: none;
-            }
-        }
-    }
-    a.map-link {
-        position: absolute;
-        display: block;
-        @include breakpoint(1024px) {
-            height: 2.25rem;
-            &.ntc1 {
-                width: 11%;
-                top: 1%;
-                left: 34.25%;
-            }
-            &.ntc2 {
-                width: 21.5%;
-                top: 5.25%;
-                left: 77.75%;
-            }
-            &.ntc3 {
-                width: 16%;
-                top: 11%;
-                left: 82.5%;
-            }
-            &.yunlin {
-                width: 10.25%;
-                top: 43%;
-                left: 9%;
-            }
-            &.chiayi {
-                width: 19%;
-                top: 58%;
-                left: 5.75%;
-            }
-            &.chiayi2 {
-                width: 24%;
-                top: 62.6%;
-                left: 5.75%;
-            }
-            &.pingtung {
-                width: 16.5%;
-                top: 79.75%;
-                left: 10.25%;
-            }
-            &.pingtung2 {
-                width: 24%;
-                top: 85.25%;
-                left: 10.25%;
-            }
-            &.taitung {
-                width: 16%;
-                top: 74%;
-                left: 76.25%;
-            }
-            &.kaohsiung {
-                width: 13.5%;
-                top: 61%;
-                left: 74.5%;
-            }
-            &.nantou {
-                width: 19%;
-                top: 39.25%;
-                left: 75.5%;
-            }
-            &.changhua {
-                width: 11.5%;
-                top: 33%;
-                left: 18.25%;
-            }
-            &.hsinchu {
-                width: 11.25%;
-                top: 12.5%;
-                left: 25.5%;
-            }
-        }
-        @media screen and (min-width: 768px) and (max-width: 1023px) {
-            height: 5.5%;
-            &.ntc1 {
-                width: 14%;
-                top: 1%;
-                left: 36.75%;
-            }
-            &.ntc2 {
-                width: 21%;
-                height: 3.7rem;
-                top: -1%;
-                left: 78.5%;
-            }
-            &.ntc3 {
-                width: 21%;
-                top: 15.25%;
-                left: 75.5%;
-            }
-            &.yunlin {
-                width: 14%;
-                top: 42.5%;
-                left: 12%;
-            }
-            &.chiayi {
-                width: 25%;
-                top: 57.5%;
-                left: 0%;
-            }
-            &.chiayi2 {
-                width: 31%;
-                top: 62.25%;
-                left: 0%;
-            }
-            &.pingtung {
-                width: 21%;
-                top: 79.25%;
-                left: 6%;
-            }
-            &.pingtung2 {
-                width: 31%;
-                top: 84.25%;
-                left: 6%;
-            }
-            &.taitung {
-                width: 21%;
-                top: 78.25%;
-                left: 77%;
-            }
-            &.kaohsiung {
-                width: 18%;
-                top: 65.25%;
-                left: 71.5%;
-            }
-            &.nantou {
-                width: 25%;
-                top: 43.25%;
-                left: 76%;
-            }
-            &.changhua {
-                width: 14.5%;
-                top: 32.5%;
-                left: 16.5%;
-            }
-            &.hsinchu {
-                width: 14.5%;
-                top: 12.25%;
-                left: 25.75%;
-            }
-        }
-        @include breakpoint(max-width 767px) {
-            height: 4%;
-            &.ntc1 {
-                width: 18%;
-                top: 3.5%;
-                left: 34%;
-            }
-            &.ntc2 {
-                width: 24.5%;
-                height: 8%;
-                top: 4.25%;
-                left: 76%;
-            }
-            &.ntc3 {
-                width: 26%;
-                top: 17.5%;
-                left: 65.5%;
-            }
-            &.yunlin {
-                width: 17%;
-                top: 48.75%;
-                left: 0.5%;
-            }
-            &.chiayi {
-                width: 31%;
-                top: 65.75%;
-                left: 0%;
-            }
-            &.chiayi2 {
-                width: 40%;
-                top: 70%;
-                left: 0%;
-            }
-            &.pingtung {
-                width: 27%;
-                top: 80.5%;
-                left: 11%;
-            }
-            &.pingtung2 {
-                width: 39%;
-                top: 84.75%;
-                left: 11%;
-            }
-            &.taitung {
-                width: 26%;
-                top: 79.75%;
-                left: 69%;
-            }
-            &.kaohsiung {
-                width: 22%;
-                top: 66%;
-                left: 71%;
-            }
-            &.nantou {
-                width: 30%;
-                top: 42.35%;
-                left: 61%;
-            }
-            &.changhua {
-                width: 17.5%;
-                top: 35.25%;
-                left: 2.5%;
-            }
-            &.hsinchu {
-                width: 17.5%;
-                top: 14.25%;
-                left: 17.25%;
-            }
-        }
-    }
-    // >div.h6 {
-    //     position: absolute;
-    //     display: block;
-    //     color: $text;
-    //     line-height: 1;
-    //     &.map-titile-left {
-    //         @include translateX(calc(-100% - 10px));
-    //         @include breakpoint(1024px) {
-    //             @include translateX(calc(-100% - 20px));
-    //         }
-    //     }
-    //     &.map-titile-right {
-    //         @include translateX(calc(100% + 10px));
-    //         @include breakpoint(1024px) {
-    //             @include translateX(calc(100% + 20px));
-    //         }
-    //     }
-    //     span {
-    //         display: inline-block;
-    //         @include breakpoint(max-width 1023px) {
-    //             margin-bottom: 5px;
-    //         }
-    //         @include breakpoint(max-width 375px) {
-    //             margin-bottom: 3px;
-    //         }
-    //     }
-    //     a {
-    //         display: block;
-    //         color: $text;
-    //         &:hover {
-    //             color: $blue;
-    //         }
-    //         br {
-    //             display: none;
-    //         }
-    //         @include breakpoint(1024px) {
-    //             display: inline-block;
-    //         }
-    //     }
-    //     @include breakpoint(max-width 767px) {
-    //         font-size: 16px;
-    //     }
-    //     @include breakpoint(max-width 414px) {
-    //         font-size: 14px;
-    //     }
-    //     @include breakpoint(max-width 375px) {
-    //         font-size: 12px;
-    //     }
-    //     @include breakpoint(1024px) {
-    //         line-height: 1.25;
-    //         &.ntc1 {
-    //             top: 0%;
-    //             right: 24%;
-    //         }
-    //         &.ntc2 {
-    //             top: 5%;
-    //             left: 32%;
-    //         }
-    //         &.ntc3 {
-    //             top: 11%;
-    //             left: 47%;
-    //         }
-    //         &.hsinchu {
-    //             top: 12.5%;
-    //             right: 36.75%;
-    //         }
-    //         &.changhua {
-    //             top: 33.75%;
-    //             right: 47%;
-    //         }
-    //         &.nantou {
-    //             top: 37.5%;
-    //             left: 33%;
-    //         }
-    //         &.yunlin {
-    //             top: 35.5%;
-    //             right: 46.5%;
-    //         }
-    //         &.chiayi {
-    //             top: 50.75%;
-    //             right: 38.5%;
-    //         }
-    //         &.kaohsiung {
-    //             top: 61%;
-    //             left: 31.5%;
-    //         }
-    //         &.pingtung {
-    //             top: 72.5%;
-    //             right: 32%;
-    //         }
-    //         &.taitung {
-    //             top: 74%;
-    //             left: 37.5%;
-    //         }
-    //     }
-    //     @include breakpoint(max-width 1199px) {
-    //         &.yunlin {
-    //             top: 40%;
-    //             right: 58.5%;
-    //             width: 33%;
-    //             span,
-    //             a {
-    //                 display: inline !important;
-    //                 br {
-    //                     display: block;
-    //                 }
-    //             }
-    //         }
-    //     }
-    //     @include breakpoint(max-width 1023px) {
-    //         &.ntc1 {
-    //             top: 0%;
-    //             right: 36%;
-    //         }
-    //         &.ntc2 {
-    //             top: -4%;
-    //             left: 55.5%;
-    //             width: 20%;
-    //         }
-    //         &.ntc3 {
-    //             top: 11.5%;
-    //             left: 50%;
-    //         }
-    //         &.hsinchu {
-    //             top: 13%;
-    //             right: 45%;
-    //         }
-    //         &.changhua {
-    //             top: 31%;
-    //             right: 54%;
-    //         }
-    //         &.nantou {
-    //             top: 36%;
-    //             left: 42%;
-    //         }
-    //         &.yunlin {
-    //             top: 42%;
-    //             right: 34%;
-    //             width: 32.5%;
-    //         }
-    //         &.chiayi {
-    //             top: 52%;
-    //             right: 31%;
-    //         }
-    //         &.kaohsiung {
-    //             top: 61.5%;
-    //             left: 46%;
-    //         }
-    //         &.pingtung {
-    //             top: 72.5%;
-    //             right: 31%;
-    //         }
-    //         &.taitung {
-    //             top: 74%;
-    //             left: 39%;
-    //         }
-    //     }
-    //     @include breakpoint(max-width 413px) {
-    //         &.ntc1 {
-    //             top: 0%;
-    //             right: 37%;
-    //         }
-    //         &.ntc2 {
-    //             top: -1.5%;
-    //             left: 57%;
-    //             width: 20%;
-    //         }
-    //         &.ntc3 {
-    //             top: 12.5%;
-    //             left: 52%;
-    //         }
-    //         &.hsinchu {
-    //             top: 13%;
-    //             right: 46%;
-    //         }
-    //         &.changhua {
-    //             top: 31%;
-    //             right: 55%;
-    //         }
-    //         &.nantou {
-    //             top: 36%;
-    //             left: 44%;
-    //         }
-    //         &.yunlin {
-    //             top: 42%;
-    //             right: 37.5%;
-    //             width: 30%;
-    //         }
-    //         &.chiayi {
-    //             top: 52%;
-    //             right: 27%;
-    //         }
-    //         &.kaohsiung {
-    //             top: 61.5%;
-    //             left: 47%;
-    //         }
-    //         &.pingtung {
-    //             top: 73.5%;
-    //             right: 20%;
-    //         }
-    //         &.taitung {
-    //             top: 74%;
-    //             left: 40.5%;
-    //         }
-    //     }
-    //     @include breakpoint(max-width 374px) {
-    //         &.ntc1 {
-    //             right: 35%;
-    //         }
-    //         &.ntc2 {
-    //             top: -4.5%;
-    //             left: 54%;
-    //             width: 23%;
-    //         }
-    //         &.ntc3 {
-    //             top: 12%;
-    //             left: 48%;
-    //         }
-    //         &.hsinchu {
-    //             right: 43%;
-    //         }
-    //         &.changhua {
-    //             top: 30%;
-    //             right: 53%;
-    //         }
-    //         &.nantou {
-    //             left: 40%;
-    //         }
-    //         &.yunlin {
-    //             right: 33%;
-    //             width: 34%;
-    //         }
-    //         &.kaohsiung {
-    //             top: 59.5%;
-    //             left: 44%;
-    //         }
-    //         &.taitung {
-    //             top: 75%;
-    //             left: 36.5%;
-    //         }
-    //     }
-    //     &.spec {
-    //         span {
-    //             margin-bottom: 10px;
-    //             @include breakpoint(1200px) {
-    //                 margin-bottom: 20px;
-    //             }
-    //         }
-    //         a {
-    //             display: block;
-    //         }
-    //     }
-    // }
-}
-
-.map-item {
-    padding: 20px;
-    font-size: 0;
-    background-color: $white;
-    border: 2px solid $blue;
-    box-shadow: 20px 20px 20px rgba($black, 0.05);
-    @include border-radius(20px);
-    @include breakpoint(1200px) {
-        padding: 30px;
-        border-width: 4px;
-    }
-    .map-img {
-        display: inline-block;
-        vertical-align: text-top;
-        position: relative;
-        width: 100%;
-        height: 0;
-        padding-top: 68.518519%;
-        @include border-radius(20px);
-        overflow: hidden;
-        @include breakpoint(1200px) {
-            width: 540px;
-            padding-top: calc(540px * 0.68518519);
-        }
-        img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            @include translate(-50%, -50%);
-        }
-    }
-    .map-body {
-        position: relative;
-        display: inline-block;
-        vertical-align: text-top;
-        width: 100%;
-        height: 68.518519%;
-        @include breakpoint(max-width 1199px) {
-            margin-bottom: 2em;
-        }
-        @include breakpoint(1200px) {
-            width: calc(100% - 540px);
-            height: calc(540px * 0.68518519);
-            padding-right: 40px;
-        }
-    }
-    .map-since {
-        margin-top: 5px;
-        margin-bottom: 10px;
-        @include breakpoint(1200px) {
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
-    }
-    .map-phrase {
-        color: $text;
-    }
-    .map-link {
-        left: 0;
-        bottom: 0;
-        @include breakpoint(1200px) {
-            position: absolute;
-        }
-        @include breakpoint(max-width 1199px) {
-            margin-top: 1em;
-        }
-        a {
-            display: block;
-            color: $blue;
-            font-size: 0.875em;
-            word-break: break-word;
-            i.icon {
-                color: $blue-dark;
-            }
-            &:hover {
-                color: $blue-dark;
-            }
-        }
-    }
-}
+@import "_map";
 
 .project-year-list {
     @include border-radius(20px);
@@ -672,10 +95,37 @@
         height: 100%;
     }
     .year-number {
+        position: relative;
         color: $white;
         background-color: $blue;
         @include border-radius(20px 20px 0 0);
         @include transition(color 0.3s, background 0.3s, border 0.3s);
+        &.has-button {
+            padding-left: 100px;
+            padding-right: 120px;
+            @include breakpoint(375px) {
+                padding-left: 120px;
+            }
+            @include breakpoint(max-width 374px) {
+                text-align: left;
+            }
+        }
+        button {
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            padding: 10px;
+            color: $white;
+            font-size: 1rem;
+            line-height: 1;
+            border: 1px solid $white;
+            background-color: transparent;
+            @include border-radius(40px);
+            @include translateY(-50%);
+            @include breakpoint(1200px) {
+                font-size: 1.125rem;
+            }
+        }
     }
     ol.year-list {
         @include listrest(0, 30px, none);
@@ -1107,3 +557,22 @@
         background-color: $yellow;
     }
 }
+
+.dcp-2020-btn-group {
+    position: relative;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 35px;
+    .dcp-2020-btn {
+        @include btn-blue2yellow($blues);
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    .click-icon {
+        position: absolute;
+        bottom: 0px;
+        right: 15px;
+    }
+}
+

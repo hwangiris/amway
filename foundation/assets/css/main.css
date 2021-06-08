@@ -2368,6 +2368,11 @@ footer .btn-contained strong {
   font-size: 0;
   overflow: hidden;
 }
+@media (max-width: 478px) {
+  .donate-tab-group .finacial-tab-nav {
+    display: flex;
+  }
+}
 .donate-tab-group .finacial-tab-nav::after {
   content: "";
   display: block;
@@ -2416,6 +2421,20 @@ footer .btn-contained strong {
   -webkit-border-radius: 10px;
   border-radius: 10px 10px 0 0;
   box-shadow: 12px 12px 12px rgba(23, 23, 23, 0.05);
+}
+@media (max-width: 478px) {
+  .donate-tab-group .finacial-tab-nav li a {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .donate-tab-group .finacial-tab-nav li a span {
+    display: block;
+    line-height: 1.15;
+  }
 }
 @media (min-width: 375px) {
   .donate-tab-group .finacial-tab-nav li a {
@@ -2869,7 +2888,7 @@ footer .btn-contained strong {
 }
 .year-table-group.year-table-group--blue a.btn {
   display: inline-block;
-  padding: 0.25em 1em 0.35em;
+  padding: 0.3em 1em;
   color: #fff;
   background-color: #3bb6bd;
   border: 2px solid #3bb6bd;
@@ -2883,7 +2902,7 @@ footer .btn-contained strong {
 }
 .year-table-group.year-table-group--yellow a.btn {
   display: inline-block;
-  padding: 0.25em 1em 0.35em;
+  padding: 0.3em 1em;
   color: #fff;
   background-color: #faa32c;
   border: 2px solid #faa32c;
@@ -2894,6 +2913,78 @@ footer .btn-contained strong {
 .year-table-group.year-table-group--yellow a.btn:hover, .year-table-group.year-table-group--yellow a.btn.active {
   background-color: #f49210;
   border-color: #f49210;
+}
+
+.modal-body table {
+  width: 100%;
+}
+.modal-body table tr th, .modal-body table tr td {
+  padding: 1.5rem 0.75rem;
+}
+@media (min-width: 1024px) {
+  .modal-body table tr th, .modal-body table tr td {
+    padding: 1.875rem 1.5625rem;
+  }
+}
+.modal-body table tr th:first-child, .modal-body table tr td:first-child {
+  padding-left: 1.5rem;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .modal-body table tr th:first-child, .modal-body table tr td:first-child {
+    padding-left: 3.125rem;
+  }
+}
+.modal-body table tr th:last-child, .modal-body table tr td:last-child {
+  padding-right: 1.5rem;
+}
+@media (min-width: 1024px) {
+  .modal-body table tr th:last-child, .modal-body table tr td:last-child {
+    padding-right: 3.125rem;
+  }
+}
+.modal-body table thead {
+  color: #fff;
+  background-color: #3bb6bd;
+}
+.modal-body table tbody tr:nth-child(odd) {
+  background-color: rgba(59, 182, 189, 0.1);
+}
+.modal-body table tbody tr:nth-child(5) {
+  border-bottom: 4px solid #3bb6bd;
+}
+.modal-body table tbody tr td:nth-child(1), .modal-body table tbody tr td:nth-child(2) {
+  color: #3bb6bd;
+  font-weight: 500;
+}
+.modal-body table tbody tr td:nth-child(1) {
+  width: 90px;
+}
+@media (min-width: 414px) {
+  .modal-body table tbody tr td:nth-child(1) {
+    width: 90px;
+  }
+}
+@media (min-width: 1024px) {
+  .modal-body table tbody tr td:nth-child(1) {
+    width: 130px;
+  }
+}
+.modal-body table tbody tr td:nth-child(2) {
+  width: 110px;
+}
+@media (min-width: 414px) {
+  .modal-body table tbody tr td:nth-child(2) {
+    width: 150px;
+  }
+}
+@media (min-width: 1024px) {
+  .modal-body table tbody tr td:nth-child(2) {
+    width: 380px;
+  }
+}
+.modal-body table tbody tr td:nth-child(3) {
+  color: #808080;
 }
 
 section {
@@ -3232,7 +3323,7 @@ section {
 }
 .slider-dot .btn-outlined {
   display: inline-block;
-  padding: 0.25em 1em 0.35em;
+  padding: 0.3em 1em;
   color: #3bb6bd;
   border: 2px solid #3bb6bd;
   -moz-border-radius: 10px;
@@ -3562,214 +3653,418 @@ section {
 }
 @media (min-width: 1024px) {
   .map-group a.map-link {
-    height: 2.25rem;
+    height: 2rem;
   }
   .map-group a.map-link.ntc1 {
-    width: 11%;
-    top: 1%;
-    left: 34.25%;
+    top: 1.1%;
+    left: 21.1%;
+    width: 30.1%;
   }
   .map-group a.map-link.ntc2 {
-    width: 21.5%;
-    top: 5.25%;
-    left: 77.75%;
+    top: 4.1%;
+    left: 41.65%;
+    width: 9.5%;
   }
   .map-group a.map-link.ntc3 {
-    width: 16%;
-    top: 11%;
-    left: 82.5%;
+    top: 7.1%;
+    left: 37.2%;
+    width: 14%;
   }
-  .map-group a.map-link.yunlin {
-    width: 10.25%;
-    top: 43%;
-    left: 9%;
-  }
-  .map-group a.map-link.chiayi {
-    width: 19%;
-    top: 58%;
-    left: 5.75%;
-  }
-  .map-group a.map-link.chiayi2 {
-    width: 24%;
-    top: 62.6%;
-    left: 5.75%;
-  }
-  .map-group a.map-link.pingtung {
-    width: 16.5%;
-    top: 79.75%;
-    left: 10.25%;
-  }
-  .map-group a.map-link.pingtung2 {
-    width: 24%;
-    top: 85.25%;
-    left: 10.25%;
-  }
-  .map-group a.map-link.taitung {
-    width: 16%;
-    top: 74%;
-    left: 76.25%;
-  }
-  .map-group a.map-link.kaohsiung {
-    width: 13.5%;
-    top: 61%;
-    left: 74.5%;
-  }
-  .map-group a.map-link.nantou {
-    width: 19%;
-    top: 39.25%;
-    left: 75.5%;
-  }
-  .map-group a.map-link.changhua {
-    width: 11.5%;
-    top: 33%;
-    left: 18.25%;
+  .map-group a.map-link.taoyuan {
+    top: 13.6%;
+    left: 23.6%;
+    width: 17%;
   }
   .map-group a.map-link.hsinchu {
-    width: 11.25%;
-    top: 12.5%;
-    left: 25.5%;
+    top: 17%;
+    left: 23.6%;
+    width: 17%;
+  }
+  .map-group a.map-link.maoli {
+    top: 24.7%;
+    left: 17.5%;
+    width: 17%;
+  }
+  .map-group a.map-link.taichung {
+    top: 34.3%;
+    left: 9%;
+    width: 17%;
+  }
+  .map-group a.map-link.changhua {
+    top: 40.3%;
+    left: 9%;
+    width: 17%;
+  }
+  .map-group a.map-link.nantou {
+    top: 37.3%;
+    left: 2.2%;
+    width: 23.7%;
+  }
+  .map-group a.map-link.yunlin {
+    top: 45%;
+    left: 6.8%;
+    width: 17%;
+  }
+  .map-group a.map-link.chiayi {
+    top: 49.95%;
+    left: 0%;
+    width: 23.7%;
+  }
+  .map-group a.map-link.chiayi2 {
+    top: 53.4%;
+    left: 7.6%;
+    width: 16.5%;
+  }
+  .map-group a.map-link.tainan {
+    top: 60.25%;
+    left: 5.7%;
+    width: 17%;
+  }
+  .map-group a.map-link.kaohsiung {
+    top: 67.25%;
+    left: 3.8%;
+    width: 19%;
+  }
+  .map-group a.map-link.pingtung {
+    top: 72.1%;
+    left: 4.6%;
+    width: 21.7%;
+  }
+  .map-group a.map-link.pingtung2 {
+    top: 75.4%;
+    left: 16.6%;
+    width: 9.5%;
+  }
+  .map-group a.map-link.pingtung3 {
+    top: 78.6%;
+    left: 12.1%;
+    width: 14%;
+  }
+  .map-group a.map-link.yilan {
+    top: 22.2%;
+    left: 82%;
+    width: 17%;
+  }
+  .map-group a.map-link.hualien {
+    top: 29.9%;
+    left: 75.9%;
+    width: 19%;
+  }
+  .map-group a.map-link.hualien2 {
+    top: 33.1%;
+    left: 83.5%;
+    width: 16%;
+  }
+  .map-group a.map-link.hualien3 {
+    top: 36.4%;
+    left: 83.5%;
+    width: 16%;
+  }
+  .map-group a.map-link.taitung {
+    top: 59.4%;
+    left: 73.3%;
+    width: 17%;
+  }
+  .map-group a.map-link.taitung2 {
+    top: 62.4%;
+    left: 80.8%;
+    width: 9.5%;
+  }
+  .map-group a.map-link.taitung3 {
+    top: 65.4%;
+    left: 80.8%;
+    width: 13.8%;
+  }
+  .map-group a.map-link.taitung4 {
+    top: 68.4%;
+    left: 80.8%;
+    width: 13.8%;
+  }
+  .map-group a.map-link.kinmen {
+    top: 14.6%;
+    left: 0.9%;
+    width: 17%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .map-group a.map-link {
-    height: 5.5%;
+    height: 2.8%;
   }
   .map-group a.map-link.ntc1 {
-    width: 14%;
-    top: 1%;
-    left: 36.75%;
+    top: 1.2%;
+    left: 28.3%;
+    width: 32.7%;
   }
   .map-group a.map-link.ntc2 {
-    width: 21%;
-    height: 3.7rem;
-    top: -1%;
-    left: 78.5%;
+    top: 5%;
+    left: 50.1%;
+    width: 10.5%;
   }
   .map-group a.map-link.ntc3 {
-    width: 21%;
-    top: 15.25%;
-    left: 75.5%;
+    top: 9.3%;
+    left: 36.4%;
+    width: 16%;
   }
-  .map-group a.map-link.yunlin {
-    width: 14%;
-    top: 42.5%;
-    left: 12%;
-  }
-  .map-group a.map-link.chiayi {
-    width: 25%;
-    top: 57.5%;
-    left: 0%;
-  }
-  .map-group a.map-link.chiayi2 {
-    width: 31%;
-    top: 62.25%;
-    left: 0%;
-  }
-  .map-group a.map-link.pingtung {
-    width: 21%;
-    top: 79.25%;
-    left: 6%;
-  }
-  .map-group a.map-link.pingtung2 {
-    width: 31%;
-    top: 84.25%;
-    left: 6%;
-  }
-  .map-group a.map-link.taitung {
-    width: 21%;
-    top: 78.25%;
-    left: 77%;
-  }
-  .map-group a.map-link.kaohsiung {
-    width: 18%;
-    top: 65.25%;
-    left: 71.5%;
-  }
-  .map-group a.map-link.nantou {
-    width: 25%;
-    top: 43.25%;
-    left: 76%;
-  }
-  .map-group a.map-link.changhua {
-    width: 14.5%;
-    top: 32.5%;
-    left: 16.5%;
+  .map-group a.map-link.taoyuan {
+    top: 15.2%;
+    left: 30.3%;
+    width: 18.7%;
   }
   .map-group a.map-link.hsinchu {
-    width: 14.5%;
-    top: 12.25%;
-    left: 25.75%;
+    top: 18.4%;
+    left: 27.3%;
+    width: 18.7%;
+  }
+  .map-group a.map-link.maoli {
+    top: 25.9%;
+    left: 20.8%;
+    width: 18.7%;
+  }
+  .map-group a.map-link.taichung {
+    top: 31.5%;
+    left: 20.8%;
+    width: 18.7%;
+  }
+  .map-group a.map-link.changhua {
+    top: 41.3%;
+    left: 9.8%;
+    width: 18.7%;
+  }
+  .map-group a.map-link.nantou {
+    top: 36.9%;
+    left: 9.8%;
+    width: 26.2%;
+  }
+  .map-group a.map-link.yunlin {
+    top: 45.5%;
+    left: 9.8%;
+    width: 18.7%;
+  }
+  .map-group a.map-link.chiayi {
+    top: 52.1%;
+    left: 1%;
+    width: 26.3%;
+  }
+  .map-group a.map-link.chiayi2 {
+    top: 56.6%;
+    left: 8.8%;
+    width: 18.5%;
+  }
+  .map-group a.map-link.tainan {
+    top: 61.25%;
+    left: 8.9%;
+    width: 18.7%;
+  }
+  .map-group a.map-link.kaohsiung {
+    top: 66.8%;
+    left: 6.1%;
+    width: 20.7%;
+  }
+  .map-group a.map-link.pingtung {
+    top: 76.8%;
+    left: 9.5%;
+    width: 24%;
+  }
+  .map-group a.map-link.pingtung2 {
+    top: 81.2%;
+    left: 22.7%;
+    width: 10.5%;
+  }
+  .map-group a.map-link.pingtung3 {
+    top: 85.75%;
+    left: 17.5%;
+    width: 16%;
+  }
+  .map-group a.map-link.yilan {
+    top: 21%;
+    left: 86.3%;
+    width: 10.5%;
+    height: 5.3%;
+  }
+  .map-group a.map-link.hualien {
+    top: 28.4%;
+    left: 83.7%;
+    width: 13%;
+    height: 5.3%;
+  }
+  .map-group a.map-link.hualien2 {
+    top: 35.8%;
+    left: 78.3%;
+    width: 19%;
+  }
+  .map-group a.map-link.hualien3 {
+    top: 41.2%;
+    left: 78.3%;
+    width: 19%;
+  }
+  .map-group a.map-link.taitung {
+    top: 56.9%;
+    left: 76.8%;
+    width: 10.5%;
+    height: 5.3%;
+  }
+  .map-group a.map-link.taitung2 {
+    top: 63.4%;
+    left: 76.8%;
+    width: 10.5%;
+  }
+  .map-group a.map-link.taitung3 {
+    top: 69.7%;
+    left: 72.2%;
+    width: 15.8%;
+  }
+  .map-group a.map-link.taitung4 {
+    top: 73.6%;
+    left: 72.2%;
+    width: 15.8%;
+  }
+  .map-group a.map-link.kinmen {
+    top: 11.5%;
+    left: 1%;
+    width: 10.5%;
+    height: 5.3%;
   }
 }
 @media (max-width: 767px) {
   .map-group a.map-link {
-    height: 4%;
+    height: 3%;
   }
   .map-group a.map-link.ntc1 {
-    width: 18%;
-    top: 3.5%;
-    left: 34%;
+    top: 0.3%;
+    left: 29%;
+    width: 37%;
   }
   .map-group a.map-link.ntc2 {
-    width: 24.5%;
-    height: 8%;
-    top: 4.25%;
-    left: 76%;
+    top: 3.9%;
+    left: 45.5%;
+    width: 12.5%;
   }
   .map-group a.map-link.ntc3 {
-    width: 26%;
-    top: 17.5%;
-    left: 65.5%;
+    top: 8.5%;
+    left: 28.4%;
+    width: 19%;
   }
-  .map-group a.map-link.yunlin {
-    width: 17%;
-    top: 48.75%;
-    left: 0.5%;
-  }
-  .map-group a.map-link.chiayi {
-    width: 31%;
-    top: 65.75%;
-    left: 0%;
-  }
-  .map-group a.map-link.chiayi2 {
-    width: 40%;
-    top: 70%;
-    left: 0%;
-  }
-  .map-group a.map-link.pingtung {
-    width: 27%;
-    top: 80.5%;
-    left: 11%;
-  }
-  .map-group a.map-link.pingtung2 {
-    width: 39%;
-    top: 84.75%;
-    left: 11%;
-  }
-  .map-group a.map-link.taitung {
-    width: 26%;
-    top: 79.75%;
-    left: 69%;
-  }
-  .map-group a.map-link.kaohsiung {
-    width: 22%;
-    top: 66%;
-    left: 71%;
-  }
-  .map-group a.map-link.nantou {
-    width: 30%;
-    top: 42.35%;
-    left: 61%;
-  }
-  .map-group a.map-link.changhua {
-    width: 17.5%;
-    top: 35.25%;
-    left: 2.5%;
+  .map-group a.map-link.taoyuan {
+    top: 14.4%;
+    left: 21%;
+    width: 22.3%;
   }
   .map-group a.map-link.hsinchu {
-    width: 17.5%;
-    top: 14.25%;
-    left: 17.25%;
+    top: 17.8%;
+    left: 17.4%;
+    width: 22.3%;
+  }
+  .map-group a.map-link.maoli {
+    top: 25.25%;
+    left: 10%;
+    width: 22.3%;
+  }
+  .map-group a.map-link.taichung {
+    top: 30.9%;
+    left: 10%;
+    width: 22.3%;
+  }
+  .map-group a.map-link.changhua {
+    top: 40.65%;
+    left: 0.4%;
+    width: 22.3%;
+  }
+  .map-group a.map-link.nantou {
+    top: 36.2%;
+    left: 0.2%;
+    width: 31%;
+  }
+  .map-group a.map-link.yunlin {
+    top: 45.5%;
+    left: 0%;
+    width: 21.8%;
+  }
+  .map-group a.map-link.chiayi {
+    top: 50.4%;
+    left: 0.1%;
+    width: 21.3%;
+    height: 5.5%;
+  }
+  .map-group a.map-link.chiayi2 {
+    top: 56.6%;
+    left: 0;
+    width: 21.6%;
+  }
+  .map-group a.map-link.tainan {
+    top: 60.7%;
+    left: 0.1%;
+    width: 22.3%;
+  }
+  .map-group a.map-link.kaohsiung {
+    top: 66.6%;
+    left: 2.2%;
+    width: 16.2%;
+    height: 5.5%;
+  }
+  .map-group a.map-link.pingtung {
+    top: 74%;
+    left: 5.5%;
+    width: 19%;
+    height: 5.5%;
+  }
+  .map-group a.map-link.pingtung2 {
+    top: 81.1%;
+    left: 12%;
+    width: 12.5%;
+  }
+  .map-group a.map-link.pingtung3 {
+    top: 86%;
+    left: 6%;
+    width: 19%;
+  }
+  .map-group a.map-link.yilan {
+    top: 20.3%;
+    left: 87%;
+    width: 12.5%;
+    height: 5.5%;
+  }
+  .map-group a.map-link.hualien {
+    top: 27.8%;
+    left: 78.5%;
+    width: 15.2%;
+    height: 5.5%;
+  }
+  .map-group a.map-link.hualien2 {
+    top: 35.3%;
+    left: 78.3%;
+    width: 22%;
+  }
+  .map-group a.map-link.hualien3 {
+    top: 40.8%;
+    left: 78.3%;
+    width: 22%;
+  }
+  .map-group a.map-link.taitung {
+    top: 56.6%;
+    left: 76.1%;
+    width: 12.5%;
+    height: 5.5%;
+  }
+  .map-group a.map-link.taitung2 {
+    top: 63%;
+    left: 76.1%;
+    width: 12.5%;
+  }
+  .map-group a.map-link.taitung3 {
+    top: 69.6%;
+    left: 69.5%;
+    width: 18.8%;
+  }
+  .map-group a.map-link.taitung4 {
+    top: 73.6%;
+    left: 69.5%;
+    width: 18.8%;
+  }
+  .map-group a.map-link.kinmen {
+    top: 5.7%;
+    left: 0.5%;
+    width: 12.5%;
+    height: 5.5%;
   }
 }
 
@@ -3890,6 +4185,7 @@ section {
   }
 }
 .project-year-list .year-number {
+  position: relative;
   color: #fff;
   background-color: #3bb6bd;
   -moz-border-radius: 20px 20px 0 0;
@@ -3899,6 +4195,43 @@ section {
   -o-transition: color 0.3s, background 0.3s, border 0.3s;
   -webkit-transition: color 0.3s, background 0.3s, border 0.3s;
   transition: color 0.3s, background 0.3s, border 0.3s;
+}
+.project-year-list .year-number.has-button {
+  padding-left: 100px;
+  padding-right: 120px;
+}
+@media (min-width: 375px) {
+  .project-year-list .year-number.has-button {
+    padding-left: 120px;
+  }
+}
+@media (max-width: 374px) {
+  .project-year-list .year-number.has-button {
+    text-align: left;
+  }
+}
+.project-year-list .year-number button {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  padding: 10px;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1;
+  border: 1px solid #fff;
+  background-color: transparent;
+  -moz-border-radius: 40px;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@media (min-width: 1200px) {
+  .project-year-list .year-number button {
+    font-size: 1.125rem;
+  }
 }
 .project-year-list ol.year-list {
   margin: 0;
@@ -3994,7 +4327,7 @@ section {
 
 .btn-blue-contained {
   display: inline-block;
-  padding: 0.25em 1em 0.35em;
+  padding: 0.3em 1em;
   color: #fff;
   background-color: #3bb6bd;
   border: 2px solid #3bb6bd;
@@ -4424,6 +4757,35 @@ section {
 .btn-yellow-contained:hover {
   color: #fff;
   background-color: #faa32c;
+}
+
+.dcp-2020-btn-group {
+  position: relative;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 35px;
+}
+.dcp-2020-btn-group .dcp-2020-btn {
+  display: inline-block;
+  padding: 0.3em 1em;
+  color: #fff;
+  background-color: #348bb4;
+  border: 2px solid #348bb4;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.dcp-2020-btn-group .dcp-2020-btn:hover, .dcp-2020-btn-group .dcp-2020-btn.active {
+  background-color: #faa32c;
+  border-color: #faa32c;
+}
+.dcp-2020-btn-group .click-icon {
+  position: absolute;
+  bottom: 0px;
+  right: 15px;
 }
 
 .top {
