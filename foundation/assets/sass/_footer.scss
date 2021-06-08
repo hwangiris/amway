@@ -1,0 +1,195 @@
+footer {
+    .row {
+        align-items: center;
+    }
+    .bb-red-1 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $red;
+        @include breakpoint(1024px) {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        .d-flex {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            >div:first-child {
+                width: calc(100% - 150px);
+                @include breakpoint(375px) {
+                    width: calc(100% - 165px);
+                }
+                @include breakpoint(414px) {
+                    width: calc(100% - 180px);
+                    max-width: 240px;
+                }
+                @include breakpoint(1024px) {
+                    width: 300px;
+                    max-width: none;
+                }
+            }
+        }
+    }
+    a.logo img {
+        margin: auto;
+        width: 100%;
+    }
+    .copyright {
+        color: $white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 0.75em;
+        @include breakpoint(1024px) {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-size: 0.875em;
+        }
+    }
+    .contact {
+        @include listrest(1em 0 2em, 0, none);
+        font-size: 0.875em;
+    }
+    .serial {
+        @include listrest(1em 0, 0, none);
+        font-size: 0.75em;
+        @include breakpoint(1024px) {
+            font-size: 0.875em;
+        }
+    }
+    .contact,
+    .serial {
+        color: $black;
+        line-height: 1.75;
+        a {
+            color: $black;
+            &:hover {
+                color: $red;
+            }
+        }
+        span {
+            display: inline-block;
+            margin-right: 1em;
+        }
+    }
+    .share {
+        @include listrest(0 0 0.25em, 0, none);
+        @include breakpoint(1024px) {
+            margin-bottom: 1em;
+        }
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            +li {
+                margin-left: 5px;
+                @include breakpoint(1024px) {
+                    margin-left: 10px;
+                }
+            }
+            a {
+                display: block;
+                padding: 2px 5px;
+                color: $white;
+                font-size: 0.75rem;
+                font-weight: 500;
+                @include border-radius(5px);
+                >* {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                i.icon {
+                    margin-right: 3px;
+                }
+            }
+            &.facebook a {
+                background-color: $facebook;
+                &:hover {
+                    background-color: darken($facebook, 5%);
+                }
+            }
+            &.snsline a {
+                background-color: $line;
+                &:hover {
+                    background-color: darken($line, 5%);
+                }
+            }
+        }
+    }
+    .sns {
+        @include listrest(0 0 0.25em, 0, none);
+        @include breakpoint(1024px) {
+            margin-bottom: 1em;
+        }
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 6px;
+            padding-right: 6px;
+            @include breakpoint(1024px) {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+            a {
+                display: block;
+            }
+            i {
+                display: block;
+                font-size: 1.5em;
+                @include breakpoint(1024px) {
+                    font-size: 2em;
+                }
+            }
+            &.facebook a {
+                color: $facebook;
+                &:hover {
+                    color: darken($facebook, 5%);
+                }
+            }
+            &.mail a {
+                color: $red;
+                &:hover {
+                    color: darken($red, 5%);
+                }
+            }
+            &.youtube a {
+                color: $youtube;
+                &:hover {
+                    color: darken($youtube, 5%);
+                }
+            }
+        }
+    }
+    .btn-contained {
+        display: block;
+        padding: 0.25em 1em;
+        color: #fff;
+        font-size: 0.75em;
+        line-height: 1;
+        background-color: $red;
+        border: 2px solid $red;
+        @include border-radius(30px);
+        @include breakpoint(1024px) {
+            font-size: 1.125em;
+        }
+        >* {
+            display: inline-block;
+            vertical-align: middle;
+            font-weight: 400;
+        }
+        strong {
+            font-size: 1.33333333em;
+        }
+    }
+    .code-block {
+        @include breakpoint(768px) {
+            text-align: center;
+        }
+        @include breakpoint(max-width 767px) {
+            margin-bottom: 0.875rem;
+            >* {
+                display: inline-block;
+                margin: 0.875rem 0.875rem 0 0;
+            }
+        }
+    }
+}

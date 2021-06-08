@@ -1,0 +1,90 @@
+.red {
+    color: $red;
+}
+
+.yellow {
+    color: $yellow;
+}
+
+.blue {
+    color: $blue;
+}
+
+.red-dark {
+    color: $red-dark;
+}
+
+.yellow-dark {
+    color: $yellow-dark;
+}
+
+.blue-dark {
+    color: $blue-dark;
+}
+
+.blue-darken {
+    color: $blue-darken;
+}
+
+.red-bg {
+    background-color: $red;
+}
+
+.yellow-bg {
+    background-color: $yellow;
+}
+
+.blue-bg {
+    background-color: $blue;
+}
+
+.red-light-bg {
+    background-color: $red;
+}
+
+.yellow-light-bg {
+    background-color: $yellow-light;
+}
+.yellow-lighten-bg {
+    background-color: #f9f5f0;
+}
+
+.blue-light-bg {
+    background-color: $blue;
+}
+
+.blue-dark-bg {
+    background-color: $blue-dark;
+}
+
+.blue-darken-bg {
+    background-color: $blue-darken;
+}
+.yellow-dark-bg {
+    background-color: $yellow-dark;
+}
+
+.yellow-darken-bg {
+    background-color: $yellow-darken;
+}
+
+.decoration-group {
+    position: relative;
+    height: 5px;
+    background-color: $blue;
+    text-align: center;
+    @include breakpoint(1024px) {
+        height: 10px;
+    }
+    .yellow-bg {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 37.5%;
+        height: 5px;
+        @include translateX(-50%);
+        @include breakpoint(1024px) {
+            height: 10px;
+        }
+    }
+}

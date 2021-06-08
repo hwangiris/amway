@@ -1,0 +1,255 @@
+.tab-nav {
+    @include listrest(0 auto, 0, none);
+    font-size: 0;
+    text-align: center;
+    li {
+        display: inline-block;
+        margin: 0 5px 10px;
+        a {
+            @include btn-contained($white, $blue);
+            border: 1px solid $blue;
+            font-size: 16px;
+            box-shadow: 3px 3px 3px rgba($black, 0.1);
+            @include breakpoint(1024px) {
+                min-width: 190px;
+                font-size: 20px;
+                border-width: 2px;
+            }
+        }
+    }
+    &-donate {
+        .tab-nav {
+            padding: 0 10px;
+        }
+        @include breakpoint(max-width 1199px) {
+            padding: 0 0 5px;
+        }
+    }
+}
+
+.donate-tab-group {
+    position: relative;
+    z-index: 0;
+    .finacial-tab-nav {
+        position: relative;
+        margin-bottom: -2px;
+        padding-bottom: 2px;
+        font-size: 0;
+        overflow: hidden;
+        &::after {
+            @include beforeafter('', block);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: calc(100% - 30px);
+            height: 2px;
+            background-color: $blue;
+        }
+        li {
+            position: relative;
+            display: inline-block;
+            font-size: 14px;
+            @include breakpoint(375px) {
+                font-size: 16px;
+            }
+            @include breakpoint(1024px) {
+                font-size: 18px;
+            }
+            &:nth-child(1) {
+                z-index: 4;
+            }
+            &:nth-child(2) {
+                z-index: 3;
+            }
+            &:nth-child(3) {
+                z-index: 2;
+            }
+            &:nth-child(4) {
+                z-index: 1;
+            }
+            a {
+                display: block;
+                padding: 8px;
+                color: $text;
+                background-color: #f2f2f2;
+                border: solid #f2f2f2;
+                border-width: 2px 2px 0;
+                @include border-radius(10px 10px 0 0);
+                box-shadow: 12px 12px 12px rgba($black, 0.05);
+                @include breakpoint(375px) {
+                    padding: 10px;
+                    @include border-radius(20px 20px 0 0);
+                }
+                @include breakpoint(1024px) {
+                    padding: 10px 70px;
+                }
+                &:hover {
+                    color: $black;
+                }
+            }
+            &.active {
+                z-index: 5;
+                &::after {
+                    @include beforeafter('', block);
+                    position: absolute;
+                    top: 100%;
+                    left: 2px;
+                    width: calc(100% - 4px);
+                    height: 2px;
+                    background-color: $white;
+                }
+                a {
+                    background-color: $white;
+                }
+            }
+        }
+    }
+    .finacial-tab-content {
+        position: relative;
+        padding: 30px 15px;
+        background-color: $white;
+        border: 2px solid;
+        @include border-radius(0 10px 10px 10px);
+        @include breakpoint(375px) {
+            @include border-radius(0 20px 20px 20px);
+        }
+        &.finacial-tab-content-radius {
+            @include border-radius(10px);
+            @include breakpoint(375px) {
+                @include border-radius(20px);
+            }
+        }
+        .year-list {
+            margin-left: -7px;
+            margin-right: -7px;
+            font-size: 0;
+            text-align: center;
+            li {
+                display: inline-block;
+                margin: 0 7px 15px;
+                a {
+                    display: block;
+                    padding-bottom: 5px;
+                    color: $text;
+                    font-size: 16px;
+                    line-height: 1;
+                    border-bottom: 1px solid $white;
+                    @include breakpoint(1024px) {
+                        font-size: 18px;
+                    }
+                    &:hover {
+                        color: $black;
+                    }
+                }
+            }
+        }
+        .month-list {
+            margin-left: -7px;
+            margin-right: -7px;
+            font-size: 0;
+            text-align: center;
+            &.month-list-yellow {
+                li {
+                    a {
+                        color: $yellow;
+                        border-color: $yellow;
+                        &:hover {
+                            background-color: $yellow-light;
+                        }
+                    }
+                    &.active {
+                        a {
+                            background-color: $yellow;
+                        }
+                    }
+                }
+            }
+            &.month-list-blue {
+                li {
+                    a {
+                        color: $blue;
+                        border-color: $blue;
+                        &:hover {
+                            background: rgba($blue-light, 0.5);
+                        }
+                    }
+                    &.active {
+                        a {
+                            background-color: $blue;
+                        }
+                    }
+                }
+            }
+            li {
+                display: inline-block;
+                margin: 0 7px 10px;
+                a {
+                    display: block;
+                    padding: 0 17px;
+                    font-size: 16px;
+                    line-height: 1.9;
+                    border: 1px solid;
+                    @include border-radius(20px);
+                    @include breakpoint(1024px) {
+                        font-size: 18px;
+                    }
+                }
+                &.active {
+                    a {
+                        color: $white;
+                    }
+                }
+                &.disabled {
+                    a {
+                        color: $gray-200;
+                        background-color: $gray-100;
+                        border-color: $gray-100;
+                        cursor: not-allowed;
+                        &:hover {
+                            background-color: $gray-100;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.donate-blue {
+        .finacial-tab-nav {
+            &::after {
+                background-color: $blue;
+            }
+        }
+        li.active a {
+            color: $blue;
+            border-color: $blue;
+        }
+        .finacial-tab-content {
+            border-color: $blue;
+            .year-list li.active a {
+                color: $blue;
+                border-color: $blue;
+            }
+            .h6 {
+                position: relative;
+            }
+        }
+    }
+    &.donate-yellow {
+        .finacial-tab-nav {
+            &::after {
+                background-color: $yellow;
+            }
+        }
+        li.active a {
+            color: $yellow;
+            border-color: $yellow;
+        }
+        .finacial-tab-content {
+            border-color: $yellow;
+            .year-list li.active a {
+                color: $yellow;
+                border-color: $yellow;
+            }
+        }
+    }
+}

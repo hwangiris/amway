@@ -1,0 +1,193 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $white;
+    z-index: 2;
+    .d-flex {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        @include breakpoint(max-width 1439px) {
+            padding-top: 13px;
+            padding-bottom: 13px;
+        }
+    }
+    .container {
+        position: relative;
+        @include breakpoint(1440px) {
+            max-width: none;
+        }
+        @include breakpoint(1760px) {
+            max-width: 1730px;
+        }
+    }
+    h1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include opacity(0);
+    }
+    a.logo {
+        img {
+            height: 30px;
+            @include breakpoint(1024px) {
+                height: 36px;
+            }
+            @include breakpoint(1440px) {
+                height: 45px;
+            }
+        }
+    }
+}
+
+a.logo {
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+
+.hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 17px 16px;
+    cursor: pointer;
+    @include transition(background-color 0.3s);
+    &:hover {
+        background-color: $yellow-dark;
+    }
+    @include breakpoint(1024px) {
+        padding: 22px 20px;
+    }
+    @include breakpoint(1440px) {
+        display: none;
+    }
+    span {
+        display: block;
+        width: 25px;
+        height: 4px;
+        background-color: $white;
+        +span {
+            margin-top: 5px;
+        }
+    }
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    @include breakpoint(max-width 1439px) {
+        padding-right: 65px;
+    }
+    @include breakpoint(max-width 1023px) {
+        padding-right: 55px;
+    }
+    ul {
+        @include listrest(0, 0, none);
+        font-size: 0;
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            a {
+                display: block;
+                color: $black;
+                font-size: 1.125rem;
+                line-height: 1;
+            }
+            i {
+                display: block;
+                line-height: 1;
+            }
+        }
+        &.main {
+            @include breakpoint(max-width 1439px) {
+                display: none;
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 200px;
+                height: 100%;
+                padding: 71px 0 20px;
+                background-color: #fff;
+                z-index: 10;
+            }
+            li {
+                a {
+                    padding: 24px 15px;
+                    &.active {
+                        color: $white;
+                        background-color: $red;
+                    }
+                    &:hover,
+                    &.active:hover {
+                        color: $red;
+                        background-color: transparent;
+                    }
+                }
+                @include breakpoint(max-width 1439px) {
+                    display: block;
+                    a {
+                        padding: 24px 35px;
+                    }
+                }
+            }
+        }
+        &.other {
+            li {
+                padding-left: 12px;
+                a i {
+                    font-size: 1.5em;
+                    @include breakpoint(1024px) {
+                        font-size: 2em;
+                    }
+                }
+                &.facebook {
+                    a {
+                        color: $facebook;
+                        &:hover {
+                            color: darken($facebook, 5%);
+                        }
+                    }
+                }
+                &.youtube {
+                    a {
+                        color: $youtube;
+                        &:hover {
+                            color: darken($youtube, 5%);
+                        }
+                    }
+                }
+                &.donation {
+                    a {
+                        color: $red;
+                        &:hover {
+                            color: darken($red, 5%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+body.menu-opened {
+    position: fixed;
+    width: 100%;
+}
+
+.bodyTouchBlock {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    &.menu-opened {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}

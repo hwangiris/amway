@@ -1,0 +1,316 @@
+.expenditure-table-block,
+.income-table-block {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: visible;
+}
+
+.expenditure-table {
+    min-width: 960px;
+    td {
+        padding: 10px;
+        color: $text;
+        @include breakpoint(1024px) {
+            padding: 10px 20px;
+        }
+    }
+    thead {
+        tr.white td {
+            color: $white;
+            +td {
+                border-left: 5px solid $white;
+            }
+        }
+    }
+    tbody {
+        tr {
+            &:nth-child(odd) {
+                td {
+                    background-color: #f2f2f2;
+                }
+            }
+            &:nth-child(even) {
+                td {
+                    background-color: #fafafa;
+                }
+            }
+        }
+        td {
+            color: $text;
+            a {
+                color: $blue;
+                &:hover {
+                    color: $blue-dark;
+                }
+            }
+            i.icon {
+                font-weight: 600;
+            }
+        }
+    }
+    tfoot {
+        border-top: 1px solid #e5e5e5;
+        td {
+            color: $text;
+        }
+    }
+}
+
+.income-table {
+    min-width: 620px;
+    td {
+        padding: 10px;
+        color: $text;
+        @include breakpoint(1024px) {
+            padding: 10px 20px;
+        }
+    }
+    thead {
+        tr.white td {
+            color: $white;
+            +td {
+                border-left: 5px solid $white;
+            }
+        }
+    }
+    tbody {
+        tr {
+            &:nth-child(odd) {
+                td {
+                    background-color: #fafafa;
+                }
+            }
+            &:nth-child(even) {
+                td {
+                    background-color: #f2f2f2;
+                }
+            }
+        }
+        td {
+            a {
+                color: $blue;
+                &:hover {
+                    color: $blue-dark;
+                }
+            }
+            i.icon {
+                font-weight: 600;
+            }
+        }
+    }
+    tfoot {
+        border-top: 1px solid #e5e5e5;
+        td {
+            color: $text;
+        }
+    }
+    +.income-table {
+        border-top: 1px solid #e5e5e5;
+    }
+}
+
+.balance-table-block {
+    .balance-table {
+        @include breakpoint(1024px) {
+            width: calc((100% - 10px) / 2);
+            &:first-child {
+                float: left;
+            }
+            &:last-child {
+                float: right;
+                table:first-child {
+                    margin-bottom: 28px;
+                }
+            }
+        }
+    }
+    &::after {
+        @include clear();
+    }
+    td {
+        padding: 10px;
+        color: $text;
+        @include breakpoint(1024px) {
+            padding: 10px 20px;
+        }
+    }
+    tr.white td {
+        color: $white;
+    }
+    tbody {
+        tr {
+            &:nth-child(odd) {
+                td {
+                    background-color: #fafafa;
+                }
+            }
+            &:nth-child(even) {
+                td {
+                    background-color: #f2f2f2;
+                }
+            }
+        }
+        td {
+            a {
+                color: $blue;
+                &:hover {
+                    color: $blue-dark;
+                }
+            }
+            i.icon {
+                font-weight: 600;
+            }
+        }
+    }
+    tfoot {
+        border-top: 1px solid #e5e5e5;
+        td {
+            color: $text;
+        }
+    }
+}
+
+.contributions-table-block {
+    .contributions-table {
+        height: 880px;
+        @include breakpoint(1024px) {
+            overflow-x: hidden;
+            overflow-y: scroll;
+            &::-webkit-scrollbar {
+                width: 5px;
+            }
+            &::-webkit-scrollbar-track {
+                @include border-radius(10px);
+            }
+            &::-webkit-scrollbar-thumb {
+                @include border-radius(10px);
+            }
+            &.contributions-table-blue {
+                &::-webkit-scrollbar-track {
+                    background: rgba($blue-light, 0.5);
+                }
+                &::-webkit-scrollbar-thumb {
+                    background: $blue;
+                }
+                &::-webkit-scrollbar-thumb:hover {
+                    background: $blue-dark;
+                }
+            }
+            &.contributions-table-yellow {
+                &::-webkit-scrollbar-track {
+                    background: $yellow-light;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background: $yellow;
+                }
+                &::-webkit-scrollbar-thumb:hover {
+                    background: $yellow-dark;
+                }
+            }
+        }
+        @include breakpoint(max-width 1023px) {
+            overflow: scroll;
+        }
+        table {
+            margin-bottom: 5px;
+            width: calc(100% - 5px);
+            @include breakpoint(max-width 1023px) {
+                width: 960px;
+            }
+        }
+    }
+    td {
+        padding: 10px;
+        color: $text;
+        // &:nth-child(1),
+        &:nth-child(4) {
+            border-left: 5px solid $white;
+        }
+        @include breakpoint(1024px) {
+            padding: 10px 20px;
+        }
+    }
+    tr.white td {
+        color: $white;
+    }
+    tbody {
+        tr {
+            &:nth-child(odd) {
+                td {
+                    background-color: #fafafa;
+                }
+            }
+            &:nth-child(even) {
+                td {
+                    background-color: #f2f2f2;
+                }
+            }
+        }
+        td {
+            a {
+                color: $blue;
+                &:hover {
+                    color: $blue-dark;
+                }
+            }
+            i.icon {
+                font-weight: 600;
+            }
+        }
+    }
+    tfoot {
+        border-top: 1px solid #e5e5e5;
+        td {
+            color: $text;
+        }
+    }
+}
+
+.table-text {
+    padding-left: 15px;
+    padding-right: 15px;
+    &::after {
+        @include clear();
+    }
+    >div:first-child {
+        float: left;
+    }
+    >div:last-child {
+        float: right;
+    }
+}
+
+.year-table-group {
+    >div {
+        @include breakpoint(768px) {
+            border-left: 1px solid $gray-100;
+            border-right: 1px solid $gray-100;
+            &:nth-child(3n) {
+                border-right-color: transparent;
+            }
+            &:nth-child(3n+1) {
+                border-left-color: transparent;
+            }
+        }
+        @include breakpoint(max-width 767px) {
+            +div {
+                border-top: 1px solid $gray-100;
+            }
+        }
+    }
+    a.btn {
+        display: table !important;
+        margin: 20px auto 0;
+        min-width: 170px;
+    }
+    &.year-table-group--blue {
+        a.btn {
+            @include btn-blue2yellow();
+        }
+    }
+    &.year-table-group--yellow {
+        a.btn {
+            @include btn-yellow();
+        }
+    }
+}

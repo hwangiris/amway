@@ -1,0 +1,158 @@
+$number: 0,
+10,
+20,
+30,
+40,
+50,
+60,
+70;
+@for $i from 1 through 8 {
+    //
+    .m-#{nth($number, $i)} {
+        margin: nth($number, $i)+px;
+    }
+    .mt-#{nth($number, $i)} {
+        margin-top: nth($number, $i)+px;
+    }
+    .mb-#{nth($number, $i)} {
+        margin-bottom: nth($number, $i)+px;
+    }
+    .ml-#{nth($number, $i)} {
+        margin-left: nth($number, $i)+px;
+    }
+    .mr-#{nth($number, $i)} {
+        margin-right: nth($number, $i)+px;
+    }
+    .mx-#{nth($number, $i)} {
+        margin-left: nth($number, $i)+px;
+        margin-right: nth($number, $i)+px;
+    }
+    .my-#{nth($number, $i)} {
+        margin-top: nth($number, $i)+px;
+        margin-bottom: nth($number, $i)+px;
+    }
+    //
+    .p-#{nth($number, $i)} {
+        padding: nth($number, $i)+px;
+    }
+    .pt-#{nth($number, $i)} {
+        padding-top: nth($number, $i)+px;
+    }
+    .pb-#{nth($number, $i)} {
+        padding-bottom: nth($number, $i)+px;
+    }
+    .pl-#{nth($number, $i)} {
+        padding-left: nth($number, $i)+px;
+    }
+    .pr-#{nth($number, $i)} {
+        padding-right: nth($number, $i)+px;
+    }
+    .px-#{nth($number, $i)} {
+        padding-left: nth($number, $i)+px;
+        padding-right: nth($number, $i)+px;
+    }
+    .py-#{nth($number, $i)} {
+        padding-top: nth($number, $i)+px;
+        padding-bottom: nth($number, $i)+px;
+    }
+    @include breakpoint(768px) {
+        //
+        .m-d-#{nth($number, $i)} {
+            margin: nth($number, $i)+px;
+        }
+        .mt-d-#{nth($number, $i)} {
+            margin-top: nth($number, $i)+px;
+        }
+        .mb-d-#{nth($number, $i)} {
+            margin-bottom: nth($number, $i)+px;
+        }
+        .ml-d-#{nth($number, $i)} {
+            margin-left: nth($number, $i)+px;
+        }
+        .mr-d-#{nth($number, $i)} {
+            margin-right: nth($number, $i)+px;
+        }
+        .mx-d-#{nth($number, $i)} {
+            margin-left: nth($number, $i)+px;
+            margin-right: nth($number, $i)+px;
+        }
+        .my-d-#{nth($number, $i)} {
+            margin-top: nth($number, $i)+px;
+            margin-bottom: nth($number, $i)+px;
+        }
+        //
+        .p-d-#{nth($number, $i)} {
+            padding: nth($number, $i)+px;
+        }
+        .pt-d-#{nth($number, $i)} {
+            padding-top: nth($number, $i)+px;
+        }
+        .pb-d-#{nth($number, $i)} {
+            padding-bottom: nth($number, $i)+px;
+        }
+        .pl-d-#{nth($number, $i)} {
+            padding-left: nth($number, $i)+px;
+        }
+        .pr-d-#{nth($number, $i)} {
+            padding-right: nth($number, $i)+px;
+        }
+        .px-d-#{nth($number, $i)} {
+            padding-left: nth($number, $i)+px;
+            padding-right: nth($number, $i)+px;
+        }
+        .py-d-#{nth($number, $i)} {
+            padding-top: nth($number, $i)+px;
+            padding-bottom: nth($number, $i)+px;
+        }
+    }
+    @include breakpoint(max-width 767px) {
+        //
+        .m-m-#{nth($number, $i)} {
+            margin: nth($number, $i)+px;
+        }
+        .mt-m-#{nth($number, $i)} {
+            margin-top: nth($number, $i)+px;
+        }
+        .mb-m-#{nth($number, $i)} {
+            margin-bottom: nth($number, $i)+px;
+        }
+        .ml-m-#{nth($number, $i)} {
+            margin-left: nth($number, $i)+px;
+        }
+        .mr-m-#{nth($number, $i)} {
+            margin-right: nth($number, $i)+px;
+        }
+        .mx-m-#{nth($number, $i)} {
+            margin-left: nth($number, $i)+px;
+            margin-right: nth($number, $i)+px;
+        }
+        .my-m-#{nth($number, $i)} {
+            margin-top: nth($number, $i)+px;
+            margin-bottom: nth($number, $i)+px;
+        }
+        //
+        .p-m-#{nth($number, $i)} {
+            padding: nth($number, $i)+px;
+        }
+        .pt-m-#{nth($number, $i)} {
+            padding-top: nth($number, $i)+px;
+        }
+        .pb-m-#{nth($number, $i)} {
+            padding-bottom: nth($number, $i)+px;
+        }
+        .pl-m-#{nth($number, $i)} {
+            padding-left: nth($number, $i)+px;
+        }
+        .pr-m-#{nth($number, $i)} {
+            padding-right: nth($number, $i)+px;
+        }
+        .px-m-#{nth($number, $i)} {
+            padding-left: nth($number, $i)+px;
+            padding-right: nth($number, $i)+px;
+        }
+        .py-m-#{nth($number, $i)} {
+            padding-top: nth($number, $i)+px;
+            padding-bottom: nth($number, $i)+px;
+        }
+    }
+}

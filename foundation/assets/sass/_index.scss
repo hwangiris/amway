@@ -1,0 +1,434 @@
+section {
+    width: 100%;
+    overflow: hidden;
+}
+
+.text-area-20 {
+    font-size: 16px;
+    @include breakpoint(1024px) {
+        font-size: 20px;
+    }
+    >span {
+        display: inline-block;
+    }
+}
+
+.text-area-18 {
+    font-size: 16px;
+    @include breakpoint(1024px) {
+        font-size: 18px;
+    }
+}
+
+.red-text-link {
+    position: relative;
+    color: $red;
+    &:hover {
+        color: $red-dark;
+        text-decoration: underline;
+        text-underline-position: under;
+    }
+}
+
+.opening {
+    img {
+        width: 100%;
+    }
+}
+
+.filled-card {
+    position: relative;
+    height: 100%;
+    color: $white;
+    overflow: hidden;
+    &::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        @include beforeafter('', block);
+    }
+    i.icon {
+        font-size: 3em;
+    }
+    >img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @include translate(-50%, -50%);
+        z-index: -1;
+    }
+    >a {
+        display: block;
+        color: $white;
+    }
+    video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: auto;
+        @include translate(-50%, -50%);
+        z-index: -1;
+        @include breakpoint(max-width 1024px) {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .h3-title {
+        position: relative;
+        margin-bottom: 35px;
+        line-height: 1.25;
+        &::after {
+            @include beforeafter('', block);
+            position: absolute;
+            bottom: -19px;
+            left: 50%;
+            width: 60px;
+            height: 3px;
+            background-color: $white;
+            @include translateX(-50%);
+        }
+    }
+    p {
+        font-size: 16px;
+        @include breakpoint(1024px) {
+            font-size: 20px;
+        }
+    }
+    a.btn {
+        max-width: 140px;
+        margin: auto;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1;
+        @include breakpoint(1024px) {
+            max-width: 190px;
+            font-size: 22px;
+        }
+    }
+}
+
+.filled-card-black {
+    &::before {
+        background-color: $black;
+        @include opacity(0.3);
+    }
+    &::after {
+        @include beforeafter('', block);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: calc(100% + 20px);
+        height: 0;
+        padding-top: calc((100% + 20px) * 0.12);
+        background-image: url('../images/silhouette.png');
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        @include background-size(contain);
+        @include translateX(-50%);
+        @include breakpoint(1024px) {
+            width: 100%;
+            padding-top: 11.648224%;
+        }
+    }
+}
+
+.filled-card-blue {
+    &::before {
+        background-color: $blue;
+        @include opacity(0.85);
+    }
+    a.btn {
+        @include btn-contained($white,
+        $blue);
+        @include breakpoint(1024px) {
+            padding: 0.325em 1em;
+        }
+    }
+}
+
+.filled-card-yellow {
+    &::before {
+        background-color: $yellow;
+        @include opacity(0.85);
+    }
+    a.btn {
+        @include btn-contained($white,
+        $yellow);
+        @include breakpoint(1024px) {
+            padding: 0.325em 1em;
+        }
+    }
+}
+
+.filled-section {
+    .container {
+        position: relative;
+        z-index: 1;
+        &::after {
+            @include beforeafter('',
+            block);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-image: url('../images/black_blur.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            z-index: -1;
+        }
+        .h2 {
+            text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        }
+        .h3 {
+            display: table;
+            margin-top: 10px;
+            padding: 15px 45px 0;
+            line-height: 1.15;
+            border-top: 1px solid $white;
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+        }
+        .h4-content {
+            margin-top: 10px;
+            font-weight: 500;
+            text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            span {
+                font-size: 1.67em;
+            }
+            @include breakpoint(1024px) {
+                margin-bottom: 150px;
+            }
+        }
+        .date {
+            margin-top: 20px;
+            color: $gray;
+            font-size: 1rem;
+            text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+            @include breakpoint(1024px) {
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+.story-section {
+    .container {
+        position: relative;
+    }
+    .storydeco {
+        position: absolute;
+        top: -40px;
+        left: -40px;
+        @include breakpoint(max-width 1023px) {
+            display: none;
+        }
+    }
+    .btn-group {
+        @include breakpoint(max-width 1023px) {
+            text-align: center;
+        }
+    }
+    .btn {
+        >* {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    i.icon {
+        margin-left: 5px;
+    }
+}
+
+.hide-status {
+    position: relative;
+    height: 12em;
+    overflow: hidden;
+    @include transition(height 0.3s);
+    &::after {
+        @include beforeafter('',
+        block);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 5em;
+        @include background-image(linear-gradient(top,
+        rgba(249, 245, 240, 0) 0%,
+        rgba(249, 245, 240, 1) 100%));
+        @include transition(height 0.3s);
+    }
+    &.show {
+        height: auto;
+        &::after {
+            height: 0;
+        }
+    }
+}
+
+.slider-dot {
+    padding-top: 40px;
+    .btn-outlined {
+        @include btn-outlined($blue,
+        $blue-dark);
+        margin-top: 20px;
+        font-size: 0.875em;
+        cursor: pointer;
+        @include breakpoint(1024px) {
+            margin-top: 30px;
+            font-size: 1.125em;
+        }
+    }
+}
+
+.card {
+    position: relative;
+    display: block;
+    height: 100%;
+    font-size: 0;
+    &::before {
+        @include beforeafter('',
+        block);
+        position: absolute;
+        top: 6px;
+        bottom: 6px;
+        left: 6px;
+        right: 6px;
+        border: 1px solid $white;
+        z-index: 1;
+        @include breakpoint(768px) {
+            top: 15px;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            border-width: 2px;
+        }
+    }
+    >span {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    span.card-img {
+        position: relative;
+        width: 100%;
+        padding-top: 70.27027%;
+        overflow: hidden;
+        @include breakpoint(1280px) {
+            width: 350px;
+            padding-top: calc(350px * 0.725);
+        }
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include translate(-50%,
+            -50%);
+        }
+    }
+    span.card-body {
+        color: $white;
+        font-size: 1rem;
+        @include breakpoint(max-width 1279px) {
+            width: 100%;
+            padding: 16px 16px 16px;
+        }
+        @include breakpoint(max-width 767px) {
+            font-size: 12px;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1279px) {
+            padding: 25px 35px;
+        }
+        @include breakpoint(1280px) {
+            padding-left: 15px;
+            padding-right: 30px;
+            width: calc(100% - 350px);
+        }
+        >span {
+            display: block;
+        }
+    }
+    span.card-title {
+        margin-bottom: 0.5em;
+        font-weight: 700;
+        line-height: 1.25;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
+        @include breakpoint(1280px) {
+            margin-bottom: 1em;
+        }
+        span {
+            display: inline-block;
+        }
+    }
+    span.card-btn {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 35px 35px;
+        &::after {
+            @include beforeafter('+',
+            block);
+            position: absolute;
+            bottom: -27px;
+            right: 8px;
+            line-height: 1;
+            @include breakpoint(1280px) {
+                bottom: -33px;
+                right: 5px;
+            }
+        }
+    }
+    &.card--yellow {
+        span.card-btn {
+            border-color: transparent transparent $yellow-dark transparent;
+        }
+        &:hover {
+            background-color: $yellow-dark;
+            span.card-btn {
+                border-color: transparent transparent $yellow transparent;
+            }
+        }
+    }
+    &.card--blue {
+        span.card-title {
+            @include breakpoint(1280px) {
+                line-height: 2.5;
+            }
+        }
+        span.card-btn {
+            border-color: transparent transparent $blue-dark transparent;
+        }
+        &:hover {
+            background-color: $blue-dark;
+            span.card-btn {
+                border-color: transparent transparent $blue transparent;
+            }
+        }
+    }
+    .card-decoration-left,
+    .card-decoration-right {
+        position: absolute;
+        width: 200px;
+        @include breakpoint(max-width 1279px) {
+            display: none;
+        }
+    }
+    .card-decoration-left {
+        top: -30px;
+        left: -150px;
+    }
+    .card-decoration-right {
+        top: 10px;
+        right: -140px;
+    }
+}

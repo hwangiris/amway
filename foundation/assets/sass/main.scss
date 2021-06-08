@@ -1,0 +1,52 @@
+@charset "UTF-8";
+@import "Compass";
+@import "breakpoint";
+// 元件
+@import "_variable";
+@import "_mixin";
+// 通用
+@import "_common";
+@import "_space";
+// @import "_typography";
+@import "_font";
+@import "_decoration";
+@import "_header";
+@import "_footer";
+@import "_tab";
+@import "_table";
+// index
+@import "_index";
+@import "_inner";
+.top {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 60px;
+    width: 50px;
+    height: 50px;
+    color: $white;
+    font-size: 0.875rem;
+    line-height: 50px;
+    @include border-radius(50%);
+    box-shadow: 2px 2px 5px rgba($blue, 0.5);
+    @include translateX(100%);
+    @include transition(background 0.3s);
+    cursor: pointer;
+    z-index: 1;
+    @include breakpoint(1860px) {
+        right: calc((100% - 1730px) / 2);
+    }
+    &:hover {
+        background-color: $blue-dark;
+    }
+    &::before {
+        @include beforeafter('', block);
+        position: absolute;
+        top: 4px;
+        bottom: 4px;
+        left: 4px;
+        right: 4px;
+        border: 1px dashed $white;
+        @include border-radius(50%);
+    }
+}

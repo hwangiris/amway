@@ -1,0 +1,12 @@
+$h-size: 32px,
+22px,
+18px,
+1rem,
+14px;
+@for $i from 1 through 5 {
+    h#{$i},
+    .h#{$i} {
+        font-size: nth($h-size, $i);
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,38 @@
+$index: 1280px;
+$main: 970px;
+$article: 700px;
+// 
+$gray-100: #EEEEEE !default;
+$gray-200: #D3D5D7 !default;
+$gray-300: #939EA7 !default; //secondary
+$gray-400: #6B7780 !default;
+$gray-500: #48545D !default; //secondary-variant
+// 
+$red: #e30d42 !default;
+$red-dark: darken($red, 10%) !default;
+$red-light: lighten($red, 10%) !default;
+$yellow: #faa32c !default;
+$yellow-dark: #f49210 !default;
+$yellow-darken: #cf7b10 !default;
+$yellow-light: #faf2dd !default;
+$blue: #3bb6bd !default;
+$blue-dark: #2c9ca3 !default;
+$blue-darken: #447d7d !default;
+$blue-light: lighten($blue, 10%) !default;
+// $blue-hover: #138b92 !default;
+// 
+$white: #fff !default; //background
+$gray: #fafafa !default; //background
+$black: #171717 !default;
+$dark: #808080 !default;
+// 
+$background: $white !default;
+$text: $dark !default;
+// 
+$facebook: #1877F2 !default;
+$line: #00C200 !default;
+$instagram: #221f20 !default;
+$youtube: #F00 !default;
+$twitter: #00acee !default;
+$whatapp: #4FCE5D !default;
+$mail: $red !default;
