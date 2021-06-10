@@ -130,6 +130,7 @@ $(document).ready(function() {
     $('.modal-content').click(function(event){
         event.stopPropagation();
     });
+
     $(window).load(function() {
         var opHeight = $('.opening').outerHeight();
         $('.opening-bg').height(opHeight);
