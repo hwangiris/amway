@@ -91,7 +91,7 @@
 .project-year-list {
     @include border-radius(20px);
     box-shadow: 20px 20px 20px rgba($black, 0.05);
-    @include breakpoint(1024px) {
+    @include breakpoint(768px) {
         height: 100%;
     }
     .year-number {
@@ -106,6 +106,12 @@
             @include breakpoint(375px) {
                 padding-left: 120px;
             }
+            @include breakpoint(768px) {
+                padding-left: 100px;
+            }
+            @include breakpoint(1024px) {
+                padding-left: 120px;
+            }
             @include breakpoint(max-width 374px) {
                 text-align: left;
             }
@@ -113,7 +119,7 @@
         button {
             position: absolute;
             top: 50%;
-            right: 30px;
+            right: 20px;
             padding: 10px;
             color: $white;
             font-size: 1rem;
@@ -129,11 +135,14 @@
     }
     ol.year-list {
         @include listrest(0, 30px, none);
-        height: calc(100% - 79px);
+        height: calc(100% - 70px);
         background-color: $white;
         border: 1px solid $blue;
         @include border-radius(0 0 20px 20px);
         @include transition(color 0.3s, background 0.3s, border 0.3s);
+        @include breakpoint(1024px) {
+            height: calc(100% - 79px);
+        }
         >li {
             +li {
                 margin-top: 30px;

@@ -118,21 +118,18 @@ $(document).ready(function() {
         nextArrow: "<button type='button' class='slick-navi slick-next'><i class='icon icon-chevron-right'></i></button>"
     });
 
-    $('#dream_button').click(function(){
-        $('#dream_modal').addClass('show').fadeIn();
+    $('.project-year-list .year-number button').click(function(){
+        var idx = $(this).attr('data-button').split('-')[1];
+        $('body').addClass('modal-open');
+        $('.modal[data-modal="dream_modal-' + idx + '"]').addClass('show').fadeIn();
     });
-    $('#dream_modal, #dream_modal .close').click(function(){
-        $('#dream_modal').removeClass('show').fadeOut();
+    $('.modal, .modal .close').click(function(){
+        $('body').removeClass('modal-open');
+        $('.modal').removeClass('show').fadeOut();
     });
-    $('#dream_modal .modal-content').click(function(event){
+    $('.modal-content').click(function(event){
         event.stopPropagation();
     });
-    $('.project-year-list .year-number').each(function(){
-        if ( $(this).children('button').length > 0 ) {
-            $(this).addClass('has-button');
-        }
-    });
-
     $(window).load(function() {
         var opHeight = $('.opening').outerHeight();
         $('.opening-bg').height(opHeight);
